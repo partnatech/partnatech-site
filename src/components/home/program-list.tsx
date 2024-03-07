@@ -5,13 +5,15 @@ export const ProgramList = () => {
   const programs = [
     {
       name: "Data Engineer",
-      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, ullam. Inventore dolorem consectetur dolorum neque recusandae repudiandae similique, dolor non.",
+      description:
+        "Our Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape. Mixed learning style with some to mention : Tutor-led Session, Industry-level Practical Case and Exercise, Mentoring Session, and Self-Learning.",
       link: "programs/data-engineer",
     },
     {
-      name: "Data Analyst",
-      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, ullam. Inventore dolorem consectetur dolorum neque recusandae repudiandae similique, dolor non.",
-      link: "programs/data-analyst",
+      name: "Analyst Engineer",
+      description:
+        "Unlock the full potential of your knowledge to be an Analytics Engineer. An awesome intersection between a Data Analyst and Data Engineer. This comprehensive program equips you with the latest tools and techniques. Dive deep into data integration plus preparation, analysis, and visualization to understand customer behavior and help business drive strategic decisions",
+      link: "programs/analyst-engineer",
     },
   ];
   return (
