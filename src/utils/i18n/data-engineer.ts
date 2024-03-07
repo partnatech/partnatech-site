@@ -60,4 +60,6 @@ export const dataEngineerCopy = {
       ],
     },
   ],
+
+  mentorTitle: "Mentor",
 };

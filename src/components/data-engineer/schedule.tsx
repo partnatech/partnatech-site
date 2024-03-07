@@ -8,7 +8,7 @@ const DataEngineerSchedule = () => {
         {dataEngineerCopy.scheduleTitle}
       </h2>
 
-      <div className="mx-auto max-w-4xl lg:px-8 px-5 mt-10">
+      <div className="mx-auto max-w-6xl lg:px-8 px-5 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
           {dataEngineerCopy.schedules.map((schedule, index) => (
             <div
