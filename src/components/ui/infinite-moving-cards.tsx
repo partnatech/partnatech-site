@@ -1,7 +1,9 @@
 "use client";
 
 import { cn } from "@/utils/cn";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { Linkedin } from "lucide-react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -14,6 +16,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    linkedin: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -78,10 +81,24 @@ export const InfiniteMovingCards = ({
               <div aria-hidden="true" className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
               <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">{item.quote}</span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</span>
-                </span>
+                <div className="group block flex-shrink-0">
+                  <div className="flex items-center">
+                    <div>
+                      <img
+                        className="inline-block h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <p className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</p>
+                      <p className="text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</p>
+                      <Link href={item.linkedin}>
+                        <Linkedin color="gray" size={15} />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </blockquote>
           </li>
