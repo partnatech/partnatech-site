@@ -1,5 +1,6 @@
 import { dataEngineerCopy } from "@/utils/i18n/data-engineer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DataEngineerHero() {
   return (
@@ -32,9 +33,11 @@ export default function DataEngineerHero() {
           </div>
           <div className="mt-10">
             <h4 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-3xl">Rp. 4.900K</h4>
-            <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
-              {dataEngineerCopy.cta}
-            </button>
+            <Link href="https://forms.gle/EhAy9X4kps3fEh598" target="_blank">
+              <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+                {dataEngineerCopy.cta}
+              </button>
+            </Link>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
