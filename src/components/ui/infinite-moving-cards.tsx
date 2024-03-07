@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -14,6 +15,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    linkedin: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -79,7 +81,9 @@ export const InfiniteMovingCards = ({
               <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">{item.quote}</span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>
+                  <Link href={item.linkedin}>
+                    <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>
+                  </Link>
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</span>
                 </span>
               </div>

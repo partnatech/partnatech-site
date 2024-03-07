@@ -1,4 +1,4 @@
 export const homeCopy = {
-  headline:
-    "Loreit am ipsum, dolor smet consectetur adipisicing elit. Molestias fugit inventore mollitia vero tempora reprehenderit repellendus vel id explicabo reiciendis!",
+  headline: "Data to enrich your online business",
+  description: "Loreit am ipsum, dolor smet consectetur adipisicing elit. Molestias fugit inventore mollitia vero tempora reprehenderit repellendus vel id explicabo reiciendis!",
 };
