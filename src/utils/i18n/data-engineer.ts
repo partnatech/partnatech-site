@@ -1,23 +1,20 @@
 export const dataEngineerCopy = {
   title: "Data Engineer",
   description:
-    "Hands-on real case for: ETL/ELT, Batch Processing using Local and Cloud, including tools for Dashboard and Containers.",
+    "Our Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape. Mixed learning style with some to mention:",
   cta: "Register Here",
   badges: [
     {
-      name: "Small Learning Group",
+      name: "Tutor-led Session",
     },
     {
-      name: "Fundamentals",
+      name: "Industry-level Practical Case and Exercise",
     },
     {
-      name: "Porfolio Showcase",
+      name: "Mentoring Session",
     },
     {
-      name: "Porfolio Showcase",
-    },
-    {
-      name: "Career Showcase",
+      name: "Self-Learning",
     },
   ],
 
@@ -27,39 +24,45 @@ export const dataEngineerCopy = {
       title: "Fundamental 1 Phase",
       items: [
         "Introduction to Data Engineering",
-        "Database 1: RDMS and Table Structure",
-        "Database 2: DDL and DML",
-        "Database 3: Deep dive on SQL",
+        "Database I: RDMS and Table Structure",
+        "Database II: DDL and DML",
+        "Database III: Deep dive on SQL",
+        "Database IV : Efficient Query and Table Optimization",
       ],
     },
     {
-      title: "Fundamental 1 Phase",
+      title: "Fundamental 2 Phase",
       items: [
-        "Introduction to Data Engineering",
-        "Database 1: RDMS and Table Structure",
-        "Database 2: DDL and DML",
-        "Database 3: Deep dive on SQL",
+        "Python I : Python Basics, Data Structure and Data Types",
+        "Python II : Building Web Apps using Flask",
+        "Python III : Python for Data Engineering and Utilities",
+        "Shell Scripting I : Operating Systems, Administration",
+        "Shell Scripting II : Practical Shell Scripting, Bash Scripting and Scheduler",
+        "Cloud Computing I : Introduction",
+        "Cloud Computing II : File System, Table Management",
       ],
     },
     {
-      title: "Fundamental 1 Phase",
+      title: "Specialization Phase",
       items: [
-        "Introduction to Data Engineering",
-        "Database 1: RDMS and Table Structure",
-        "Database 2: DDL and DML",
-        "Database 3: Deep dive on SQL",
+        "Intro to Data Processing Approach",
+        "Data Processing : Batch Processing I",
+        "Data Processing : Batch Processing II",
+        "Data Processing : Stream Processing I",
+        "Data Processing : Stream Processing II",
+        "Building Data Products of Data Engineering I",
+        "Building Data Products of Data Engineering II",
       ],
     },
     {
-      title: "Fundamental 1 Phase",
+      title: "Final Project Phase",
       items: [
-        "Introduction to Data Engineering",
-        "Database 1: RDMS and Table Structure",
-        "Database 2: DDL and DML",
-        "Database 3: Deep dive on SQL",
+        "Final Project Kick-off",
+        "Final Project Guidance and Tutoring I, II, III",
+        "Final Project Presentation and Career Coaching",
       ],
     },
   ],
 
-  mentorTitle: "Mentor",
+  mentorTitle: "Instructor and Mentor",
 };

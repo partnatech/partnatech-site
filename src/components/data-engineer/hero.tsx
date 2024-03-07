@@ -20,11 +20,11 @@ export default function DataEngineerHero() {
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">{dataEngineerCopy.title}</h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerCopy.description}</p>
-          <div className="grid mt-10 grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="flex flex-wrap w-full mt-4">
             {dataEngineerCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}
-                className="items-center text-center rounded-md bg-purple-400/10 px-2 py-2 text-sm font-medium text-purple-400 ring-1 ring-inset ring-purple-400/30"
+                className="items-center text-center rounded-md bg-purple-400/10 px-2 py-2 text-sm font-medium text-purple-400 ring-1 ring-inset ring-purple-400/30 mr-2 mb-2"
               >
                 {badge.name}
               </span>

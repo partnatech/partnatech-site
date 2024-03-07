@@ -15,7 +15,7 @@ const DataEngineerSchedule = () => {
               key={`schedule-${index}`}
               className="rounded-md bg-gray-400/10 py-12 px-8 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
             >
-              <p className="text-xl text-center font-semibold">{schedule.title}</p>
+              <p className="text-xl text-center font-semibold text-white">{schedule.title}</p>
               <ul className="list-disc list-inside mt-5">
                 {schedule.items.map((item, itemIndex) => (
                   <li key={`schedule-${index}-item-${itemIndex}`}>{item}</li>
