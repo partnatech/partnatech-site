@@ -17,6 +17,7 @@ export const InfiniteMovingCards = ({
     name: string;
     title: string;
     linkedin: string;
+    image: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -84,11 +85,7 @@ export const InfiniteMovingCards = ({
                 <div className="group block flex-shrink-0">
                   <div className="flex items-center">
                     <div>
-                      <img
-                        className="inline-block h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                      <img className="inline-block h-10 w-10 rounded-full" src={item.image} alt="" />
                     </div>
                     <div className="ml-3">
                       <p className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</p>
