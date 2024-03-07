@@ -10,7 +10,7 @@ export const ProgramList = () => {
       link: "programs/data-engineer",
     },
     {
-      name: "Analyst Engineer",
+      name: "Analytics Engineer",
       description:
         "Unlock the full potential of your knowledge to be an Analytics Engineer. An awesome intersection between a Data Analyst and Data Engineer. This comprehensive program equips you with the latest tools and techniques. Dive deep into data integration plus preparation, analysis, and visualization to understand customer behavior and help business drive strategic decisions",
       link: "programs/analyst-engineer",
