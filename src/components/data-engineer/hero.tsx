@@ -1,22 +1,6 @@
+import { dataEngineerCopy } from "@/utils/i18n/data-engineer";
 import Image from "next/image";
-
-const badges = [
-  {
-    name: "Small Learning Group",
-  },
-  {
-    name: "Fundamentals",
-  },
-  {
-    name: "Porfolio Showcase",
-  },
-  {
-    name: "Porfolio Showcase",
-  },
-  {
-    name: "Career Showcase",
-  },
-];
+import Link from "next/link";
 
 export default function DataEngineerHero() {
   return (
@@ -35,32 +19,31 @@ export default function DataEngineerHero() {
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Data Engineer</h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Hands-on real case for: ETL/ELT, Batch Processing using Local and Cloud, including tools for Dashboard and
-            Containers.
-          </p>
-          <div className="grid mt-10 grid-cols-2 md:grid-cols-3 gap-4">
-            {badges.map((badge, index) => (
+          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">{dataEngineerCopy.title}</h1>
+          <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerCopy.description}</p>
+          <div className="flex flex-wrap w-full mt-4">
+            {dataEngineerCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}
-                className="items-center text-center rounded-md bg-purple-400/10 px-2 py-2 text-sm font-medium text-purple-400 ring-1 ring-inset ring-purple-400/30"
+                className="items-center text-center rounded-md bg-purple-400/10 px-2 py-2 text-sm font-medium text-purple-400 ring-1 ring-inset ring-purple-400/30 mr-2 mb-2"
               >
                 {badge.name}
               </span>
             ))}
           </div>
           <div className="mt-10">
-            <h4 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-3xl">Rp. 5.000.000</h4>
-            <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
-              Register Here
-            </button>
+            <h4 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-3xl">Rp. 4.900K</h4>
+            <Link href="https://forms.gle/EhAy9X4kps3fEh598" target="_blank">
+              <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+                {dataEngineerCopy.cta}
+              </button>
+            </Link>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none ">
             <Image
-              src="/assets/images/hero-image.jpeg"
+              src="/assets/images/hero-image.jpg"
               alt="Hero Image"
               width={2432}
               height={1442}
