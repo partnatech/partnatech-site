@@ -7,20 +7,29 @@ import { ArrowRight } from "lucide-react";
 
 interface ProgramCardProps {
   name: string;
-  description: string;
   link: string;
+  duration: string;
 }
-export function ProgramCard({ name, description, link }: ProgramCardProps) {
+export function ProgramCard({ name, duration, link }: ProgramCardProps) {
   return (
     <div>
       <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 dark:bg-zinc-900">
-        <div className="space-y-8 min-h-[300px]">
-          <p className="lg:text-2xl text-center font-semibold text-base text-white mt-4 mb-2 dark:text-neutral-200">{name}</p>
-          <p className="text-sm text-white dark:text-neutral-400">{description}</p>
+        <div className="space-y-8 min-h-[280px] flex justify-between flex-col">
+          <div>
+            <p className="lg:text-2xl text-center font-semibold text-base text-white mt-4 mb-2 dark:text-neutral-200">{name}</p>
+            <ul className="text-sm text-gray-400 flex justify-center gap-3 list-disc list-inside">
+              <li>Live Class</li>
+              <li>{duration}</li>
+            </ul>
+          </div>
+          <div className="text-center">
+            <h1 className="font-semibold">Onboarding Date</h1>
+            <p className="text-sm">April 17th, 2024</p>
+          </div>
           <div>
             <Link href={`/${link}`}>
               <div className="flex items-center justify-center">
-                <p className="text-center underline">Lihat Selengkapnya</p>
+                <p className="text-center underline">Register Now</p>
                 <ArrowRight size={15} />
               </div>
             </Link>

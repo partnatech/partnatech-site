@@ -3,7 +3,8 @@
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { Linkedin } from "lucide-react";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 export const InfiniteMovingCards = ({
   items,
@@ -85,13 +86,13 @@ export const InfiniteMovingCards = ({
                 <div className="group block flex-shrink-0">
                   <div className="flex items-center">
                     <div>
-                      <img className="inline-block h-10 w-10 rounded-full" src={item.image} alt="" />
+                      <Image className="inline-block h-10 w-10 rounded-full" src={item.image} height={500} width={500} alt={item.name} />
                     </div>
                     <div className="ml-3">
-                      <p className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</p>
-                      <p className="text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</p>
-                      <Link href={item.linkedin}>
-                        <Linkedin color="gray" size={15} />
+                      <p className="font-semibold">{item.name}</p>
+                      <p className="text-xs">{item.title}</p>
+                      <Link href={item.linkedin} target="_blank">
+                        <LinkedInLogoIcon className="text-blue-600" />
                       </Link>
                     </div>
                   </div>

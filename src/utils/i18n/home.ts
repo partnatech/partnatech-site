@@ -1,6 +1,47 @@
 export const homeCopy = {
   headline: "PartnaLearn - Building bridge between talents and the industry",
-  description1:
+  description:
     "We gathered seasoned data professionals and educators to bridge more talents to the industry, our commitment is to deliver an unparalleled learning experience that equips students with the practical skills and strong fundamental knowledge required to succeed in the industry.",
-  description2: "We believe the relevance of learning materials and the optimal pace of the program, will push talents to their limit and win.",
+
+  programs: [
+    {
+      name: "Data Engineer",
+      description: "Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape.",
+      link: "programs/data-engineer",
+      duration: "12 weeks",
+    },
+    {
+      name: "Analytics Engineer",
+      description: "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
+      link: "programs/analytics-engineer",
+      duration: "9 weeks",
+    },
+  ],
+
+  testimonials: [
+    {
+      image: "/assets/images/testimonials/fix-testimonials-albiyan-abdika.png",
+      quote:
+        "I learned a lot from PartnaLearn before i really enter the Data Engineering World. Back when i was an entry-level Data Engineer, i really need to understand how the tools can help my day-to-day job. PartnaLearn practical camp was an answer. I became not overwhelmed with the tools, grasping the strong fundamentals, meanwhile solving problems with efficiency.",
+      name: "Albiyan Abdika",
+      title: "Data Warehouse Engineer - GoTo Financial",
+      linkedin: "https://www.linkedin.com/in/abdikaalbiyan/",
+    },
+    {
+      image: "/assets/images/testimonials/fix-testimonials-jomen-pardede.png",
+      quote:
+        "Out of the box! While another bootcamp just cover the fundamentals, PartnaLearn propose more challenging practice cases and curriculum, in order to build an exceptional portfolio. And the mentoring session is so intense for me, it allows me to know more about what is my mistake on my task, and how can I fix them. Keep on fire, PartnaLearn!",
+      name: "Jomen Pardede",
+      title: "BI Engineer - Evermos",
+      linkedin: "https://www.linkedin.com/in/jomen-pardede/",
+    },
+    {
+      image: "/assets/images/testimonials/fix-testimonials-ricky.png",
+      quote:
+        "Keren banget, pushing myself to my limit, banyak belajar tentang hal-hal baru terkait Data Engineering yang sebelumnya belum dipelajari. Materinya selalu relate dan relevan dengan current data engineering requirements. Mentornya hebat dan ahli serta peserta selalu didorong untuk kolaborasi aktif dalam showcase karyanya sebagai portfolio. A good place to enter the Data Engineering World !",
+      name: "Ricky Nauvaldy",
+      title: "Data Engineer - Ocado Retail UK",
+      linkedin: "https://www.linkedin.com/in/rickynauvaldy/",
+    },
+  ],
 };
