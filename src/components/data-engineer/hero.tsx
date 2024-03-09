@@ -38,7 +38,8 @@ export default function DataEngineerHero() {
             ))}
           </div>
           <div className="mt-10">
-            <h4 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-3xl">Rp. 4.900K</h4>
+            <h4 className="mt-10 text-sm font- tracking-tight text-neutral-500 sm:text-lg line-through">Rp. 5.500K</h4>
+            <h4 className="text-2xl mb-4 font-bold tracking-tight text-white sm:text-3xl">Rp. 4.900K</h4>
             <span className="flex items-center">
               <svg className="h-2 w-2 fill-red-500 animate-pulse mr-4" viewBox="0 0 6 6" aria-hidden="true">
                 <circle cx={3} cy={3} r={3} />
