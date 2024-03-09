@@ -36,12 +36,12 @@ const mentors = [
 
 const DataEngineerMentor = () => {
   return (
-    <div className="relative isolate overflow-hidden mt-12 pb-32">
+    <div className="relative isolate overflow-hidden">
       <h2 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-4xl text-center">
         {dataEngineerCopy.mentorTitle}
       </h2>
 
-      <div className="mx-auto max-w-6xl lg:px-8 px-5 mt-10">
+      <div className="mx-auto max-w-7xl lg:px-8 px-5 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
           {mentors.map((mentor, index) => (
             <div
@@ -56,9 +56,9 @@ const DataEngineerMentor = () => {
                 alt={mentor.name}
               />
 
-              <div className="space-y-2">
-                <p className="font-semibold">{mentor.name}</p>
-                <p className="text-xs text-neutral-500">{mentor.job}</p>
+              <div className="">
+                <p className="font-semibold text-lg">{mentor.name}</p>
+                <p className="text-xs text-neutral-400 my-2">{mentor.job}</p>
                 <Link href={mentor.linkedin} target="_blank">
                   <LinkedInLogoIcon className="text-blue-600" />
                 </Link>
