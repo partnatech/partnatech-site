@@ -75,6 +75,7 @@ export default function Page() {
                   <p>
                     {event.mentorJob} at {event.mentorCompany}
                   </p>
+                  <p className="mt-3">{event.time}</p>
                 </div>
                 <Link href={event.link} className="my-4 text-purple-400">
                   {event.link.replace("https://", "")}
