@@ -65,4 +65,5 @@ export const dataEngineerCopy = {
   ],
 
   mentorTitle: "Instructor and Mentor",
+  chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 17 April - 14 Juli 2024",
 };

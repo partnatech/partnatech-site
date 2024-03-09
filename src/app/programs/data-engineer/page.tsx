@@ -8,8 +8,8 @@ const DataEngineerPage = () => {
   return (
     <>
       <DataEngineerHero />
-      <DataEngineerSchedule />
       <DataEngineerMentor />
+      <DataEngineerSchedule />
     </>
   );
 };

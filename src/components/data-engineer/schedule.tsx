@@ -3,12 +3,12 @@ import React from "react";
 
 const DataEngineerSchedule = () => {
   return (
-    <div className="relative isolate overflow-hidden">
+    <div className="relative isolate overflow-hidden mt-32 pb-32">
       <h2 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-4xl text-center">
         {dataEngineerCopy.scheduleTitle}
       </h2>
 
-      <div className="mx-auto max-w-6xl lg:px-8 px-5 mt-10">
+      <div className="mx-auto max-w-7xl lg:px-8 px-5 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
           {dataEngineerCopy.schedules.map((schedule, index) => (
             <div
