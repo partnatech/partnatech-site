@@ -76,7 +76,7 @@ export default function Page() {
                     {event.mentorJob} at {event.mentorCompany}
                   </p>
                 </div>
-                <Link href={event.link} className="my-4">
+                <Link href={event.link} className="my-4 text-purple-400">
                   {event.link.replace("https://", "")}
                 </Link>
                 {event.breakdown.map((breakdown, iBreakdown) => (
