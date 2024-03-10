@@ -57,7 +57,7 @@ const links = [
     label: "Event",
     href: {
       pathname: "/events",
-      id: "#",
+      id: "",
     },
   },
 ];
@@ -77,7 +77,10 @@ export default function Navbar() {
           <NavigationMenuList>
             {links.map((link, idx) => (
               <NavigationMenuItem key={idx}>
-                <NavigationMenuLink href={pathCheck(pathname, link)} className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  href={pathCheck(pathname, link)}
+                  className={navigationMenuTriggerStyle()}
+                >
                   {link.label}
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -96,7 +99,7 @@ function Logo() {
   return (
     <Link href="/">
       <div className="font-black hover:text-primary text-2xl transition-colors ease-linear duration-300">
-        PartnaLearn
+        partnatech
       </div>
     </Link>
   );
