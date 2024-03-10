@@ -101,7 +101,7 @@ export default function Footer() {
             <p className="text-white text-2xl">partnatech</p>
             <p className="text-sm leading-6 text-gray-300">
               Office 8, Jl. Senopati 8B Lv.18A, Senayan, Kebayoran Baru, Kota Jakarta Selatan, DKI
-              Jakarta Selatan, DKI Jakarta 12190
+              Jakarta 12190
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
