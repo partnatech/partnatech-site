@@ -4,7 +4,7 @@ import { StudentTestimonials } from "@/components/home/student-testimonials";
 
 export default function Home() {
   return (
-    <div className="lg:space-y-16 space-y-8 p-4">
+    <div className="lg:space-y-12 space-y-8 p-4">
       <HomeHero />
       <ProgramList />
       <StudentTestimonials />

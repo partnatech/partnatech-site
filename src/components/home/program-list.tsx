@@ -2,6 +2,7 @@ import React from "react";
 import { ProgramCard } from "@/components/home/program-card";
 
 import { homeCopy } from "@/utils/i18n/home";
+import Link from "next/link";
 
 export const ProgramList = () => {
   return (
@@ -11,8 +12,22 @@ export const ProgramList = () => {
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-3xl max-w-xs gap-16 mx-auto">
         {homeCopy.programs.map((program, index) => {
-          return <ProgramCard key={index} name={program.name} duration={program.duration} link={program.link} />;
+          return (
+            <ProgramCard
+              key={index}
+              name={program.name}
+              duration={program.duration}
+              link={program.link}
+            />
+          );
         })}
+      </div>
+      <div className="flex justify-center py-2">
+        <Link href="/programs/scholarship">
+          <button className="rounded-md px-4 py-3 font-semibold text-white ring-2 ring-white shadow-sm hover:underline">
+            Apply for a scholarship
+          </button>
+        </Link>
       </div>
     </>
   );
