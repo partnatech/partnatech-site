@@ -1,11 +1,9 @@
 import React from "react";
-import { cn } from "@/utils/cn";
-import { scholarshipCopy } from "@/utils/i18n/scholarship";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="relative isolate overflow-hidden min-h-screen">
+    <div className="relative isolate overflow-hidden min-h-screen p-4">
       <div
         className="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
         aria-hidden="true"
@@ -19,7 +17,7 @@ export default function Page() {
         />
       </div>
       <div className="max-w-4xl mx-auto mt-12">
-        <div className="text-start font-bold text-2xl md:text-4xl space-y-8 w-10/12">
+        <div className="text-start font-bold text-2xl md:text-4xl space-y-8 lg:w-10/12 w-full">
           <h1 className="">
             We are developing a learning portal that can help you succeed in the technology field.
           </h1>
