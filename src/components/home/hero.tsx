@@ -14,8 +14,10 @@ export default function Home() {
         </div>
       </div>
       <div className="text-start lg:text-center">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl">{homeCopy.headline}</h1>
-        <p className="mt-6 text-sm lg:leading-8 text-gray-300">{homeCopy.description}</p>
+        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl">
+          {homeCopy.headline}
+        </h1>
+        <p className="mt-6 text-lg lg:leading-8 text-gray-300">{homeCopy.description}</p>
       </div>
     </div>
   );

@@ -36,7 +36,14 @@ const links = [
     label: "Programs",
     href: {
       pathname: "/programs",
-      id: "#programs",
+      id: "",
+    },
+  },
+  {
+    label: "Learn",
+    href: {
+      pathname: "/learn",
+      id: "",
     },
   },
   {
@@ -47,17 +54,17 @@ const links = [
     },
   },
   {
-    label: "Blog",
-    href: {
-      pathname: "/blog",
-      id: "#blog",
-    },
-  },
-  {
     label: "Event",
     href: {
       pathname: "/events",
       id: "",
+    },
+  },
+  {
+    label: "Blog",
+    href: {
+      pathname: "/blog",
+      id: "#blog",
     },
   },
 ];
