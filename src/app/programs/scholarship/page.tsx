@@ -14,7 +14,7 @@ const steps = [
   { id: "Step 6", name: "Onboarding", href: "#", status: "current" },
 ];
 
-function classNames(...classes: any) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
