@@ -21,7 +21,7 @@ export default function Page() {
       <div className="max-w-4xl mx-auto mt-12">
         <div className="text-start font-bold text-2xl md:text-4xl space-y-8 w-10/12">
           <h1 className="">
-            We are developing a learning portal that can help you succeed in the technology feed.
+            We are developing a learning portal that can help you succeed in the technology field.
           </h1>
           <h1>Stay tuned.</h1>
         </div>
