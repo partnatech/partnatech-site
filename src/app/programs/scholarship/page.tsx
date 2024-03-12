@@ -2,7 +2,11 @@ import { cn } from "@/utils/cn";
 import React from "react";
 
 import { scholarshipCopy } from "@/utils/i18n/scholarship";
-import Image from "next/image";
+import Link from "next/link";
+
+function classNames(...classes: any) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Page() {
   return (
@@ -43,17 +47,30 @@ export default function Page() {
           </div>
           <div className="space-y-4">
             <p className=" text-lg leading-8 text-gray-300">
-              Program scholarship adalah program dengan….
+              Ingin enroll bootcamp namun terkendala biaya?
             </p>
-            <p className=" text-lg leading-8 text-gray-300">Deskripsi</p>
-            <p className=" text-lg leading-8 text-gray-300">Why</p>
-            <p className=" text-lg leading-8 text-gray-300">Proses</p>
-            <img src="https://placehold.co/400x200" alt="test" />
+            <p className=" text-lg leading-8 text-gray-300">
+              Worry not. We have the scholarship track.
+            </p>
+            <p className=" text-lg leading-8 text-gray-300">Tahapan</p>
+            <ul className="list-inside mt-5">
+              {scholarshipCopy.steps.map((step, index) => (
+                <li key={`step-${index}`}>
+                  {step.number}. {step.text}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Siapkan portfolio mu belajar data selama ini dan silahkan tuliskan{" "}
+              <span className="italic">letter of motivation</span>.
+            </p>
             <div className="flex items-center gap-4">
               <p className="text-lg items-center">Siap mendaftar? </p>
-              <button className="rounded-md bg-indigo-500 px-4 py-2 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
-                Isi Form
-              </button>
+              <Link href="https://tally.so/r/woybae" target="_blank">
+                <button className="rounded-md bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+                  Isi Form
+                </button>
+              </Link>
             </div>
           </div>
         </div>
