@@ -43,15 +43,15 @@ export const analyticsEngineeringCopy = {
     {
       title: "Specialization Phase",
       items: [
-        "Building Data Products of Analytics Engineering I (Airflow and dbt)",
-        "Building Data Products of Analytics Engineering II (Airflow and dbt)",
-        "Building Data Products of Analytics Engineering III (Looker Studio Dashboard)",
+        "Building Data Products of Analytics Engineering I (Airflow, dbt)",
+        "Building Data Products of Analytics Engineering II (Airflow, dbt)",
+        "Building Data Products of Analytics Engineering III (Looker Studio)",
       ],
     },
     {
       title: "Final Project Phase",
       items: [
-        "Final Project Kickoff and Tutoring I (Business and Data Understanding)",
+        "Final Project Tutoring I (Business and Data Understanding)",
         "Final Project Tutoring II (Infrastructure and Data Pipeline Building)",
         "Final Project Tutoring III (Building Scalable Data Solution and Analysis)",
         "Final Project Tutoring V (Evaluation and Communication)",

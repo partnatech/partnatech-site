@@ -56,7 +56,7 @@ export const dataAnalyticsCopy = {
     {
       title: "Final Project Phase",
       items: [
-        "Final Project Kickoff and Tutoring I (Business and Data Understanding)",
+        "Final Project Tutoring I (Business and Data Understanding)",
         "Final Project Tutoring II ( Data Preparation and EDA)",
         "Final Project Tutoring III (Modeling and Evaluation I)",
         "Final Project Tutoring V (Evaluation and Communication)",

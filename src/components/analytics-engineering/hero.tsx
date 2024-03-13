@@ -25,7 +25,7 @@ export default function AnalyticsEngineeringHero() {
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:flex lg:px-8">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-10 text-3xl font-bold tracking-tight text-white sm:text-5xl">
             {analyticsEngineeringCopy.title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -58,7 +58,7 @@ export default function AnalyticsEngineeringHero() {
               </svg>{" "}
               Early Bird promo until 20 March 2024
             </span>
-            <Link href="https://forms.gle/EhAy9X4kps3fEh598" target="_blank">
+            <Link href="https://tally.so/r/3y6MY8" target="_blank">
               <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {analyticsEngineeringCopy.cta}
               </button>

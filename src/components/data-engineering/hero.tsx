@@ -56,7 +56,7 @@ export default function DataEngineerHero() {
               </svg>{" "}
               Early Bird promo until 17 March 2024
             </span>
-            <Link href="https://forms.gle/EhAy9X4kps3fEh598" target="_blank">
+            <Link href="https://tally.so/r/mYQPaN" target="_blank">
               <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {dataEngineerCopy.cta}
               </button>
