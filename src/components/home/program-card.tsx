@@ -14,7 +14,7 @@ export function ProgramCard({ name, duration, link }: ProgramCardProps) {
   return (
     <div>
       <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 dark:bg-zinc-900">
-        <div className="space-y-8 min-h-[280px] flex justify-between flex-col">
+        <div className="space-y-8 min-h-[240px] flex justify-between flex-col">
           <div>
             <p className="lg:text-2xl text-center font-semibold text-base text-white mt-4 mb-2 dark:text-neutral-200">
               {name}

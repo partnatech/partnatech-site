@@ -1,6 +1,6 @@
-import DataEngineerHero from "@/components/data-engineer/hero";
-import DataEngineerMentor from "@/components/data-engineer/mentor";
-import DataEngineerSchedule from "@/components/data-engineer/schedule";
+import DataEngineerHero from "@/components/data-engineering/hero";
+import DataEngineerMentor from "@/components/data-engineering/mentor";
+import DataEngineerSchedule from "@/components/data-engineering/schedule";
 
 import React from "react";
 
