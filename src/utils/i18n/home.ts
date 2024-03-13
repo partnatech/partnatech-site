@@ -5,16 +5,25 @@ export const homeCopy = {
 
   programs: [
     {
-      name: "Data Engineer",
-      description: "Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape.",
-      link: "programs/data-engineer",
+      name: "Data Engineering",
+      description:
+        "Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape.",
+      link: "programs/data-engineering",
       duration: "12 weeks",
     },
     {
-      name: "Analytics Engineer",
-      description: "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
-      link: "programs/analytics-engineer",
+      name: "Analytics Engineering",
+      description:
+        "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
+      link: "programs/analytics-engineering",
       duration: "9 weeks",
+    },
+    {
+      name: "Data Analytics",
+      description:
+        "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
+      link: "programs/data-analytics",
+      duration: "8 weeks",
     },
   ],
 

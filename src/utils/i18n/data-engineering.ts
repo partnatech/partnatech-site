@@ -1,5 +1,5 @@
 export const dataEngineerCopy = {
-  title: "Data Engineer",
+  title: "Data Engineering",
   description:
     "Our Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape. Mixed learning style with some to mention:",
   cta: "Register Here",
@@ -65,5 +65,31 @@ export const dataEngineerCopy = {
   ],
 
   mentorTitle: "Instructor and Mentor",
+  mentors: [
+    {
+      name: "Adam Widi",
+      job: "Data Engineer - OTA Company",
+      linkedin: "https://www.linkedin.com/in/adamwdb/",
+      image: "/assets/images/mentors/fix-mentor-adam.png",
+    },
+    {
+      name: " Abel Gideon Silaen",
+      job: "Mid Data Engineer - Bank Jasa Jakarta",
+      linkedin: "https://www.linkedin.com/in/abelgideonsilaen/",
+      image: "/assets/images/mentors/fix-tutor-abelgideon.png",
+    },
+    {
+      name: "Rio Dwi Putra Perkasa",
+      job: "Data Engineer - Tech Company",
+      linkedin: "https://www.linkedin.com/in/riodpp/",
+      image: "/assets/images/mentors/fix-tutor-riodwiputra.png",
+    },
+    {
+      name: "Ghaly Rizqi Mauludin",
+      job: "Data Engineer - Tech Company",
+      linkedin: "https://www.linkedin.com/in/ghalyrizqi/",
+      image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
+    },
+  ],
   chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 17 April - 14 Juli 2024",
 };

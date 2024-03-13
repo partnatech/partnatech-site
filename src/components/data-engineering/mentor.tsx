@@ -1,38 +1,8 @@
-import { dataEngineerCopy } from "@/utils/i18n/data-engineer";
+import { dataEngineerCopy } from "@/utils/i18n/data-engineering";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-// Adam Widi, Data Engineer - OTA Company
-// LinkedIn : https://www.linkedin.com/in/adamwdb/
-
-// Abel Gideon Silaen, Mid Data Engineer - Bank Jasa Jakarta
-// LinkedIn : https://www.linkedin.com/in/abelgideonsilaen/
-
-// Rio Dwi Putra Perkasa, Data Engineer - Tech Company
-// LinkedIn : https://www.linkedin.com/in/riodpp/
-
-const mentors = [
-  {
-    name: "Adam Widi",
-    job: "Data Engineer - OTA Company",
-    linkedin: "https://www.linkedin.com/in/adamwdb/",
-    image: "/assets/images/fix-mentor-adam.png",
-  },
-  {
-    name: " Abel Gideon Silaen",
-    job: "Mid Data Engineer - Bank Jasa Jakarta",
-    linkedin: "https://www.linkedin.com/in/abelgideonsilaen/",
-    image: "/assets/images/fix-tutor-abelgideon.png",
-  },
-  {
-    name: "Rio Dwi Putra Perkasa",
-    job: "Data Engineer - Tech Company",
-    linkedin: "https://www.linkedin.com/in/riodpp/",
-    image: "/assets/images/fix-tutor-riodwiputra.png",
-  },
-];
 
 const DataEngineerMentor = () => {
   return (
@@ -43,7 +13,7 @@ const DataEngineerMentor = () => {
 
       <div className="mx-auto max-w-7xl lg:px-8 px-5 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
-          {mentors.map((mentor, index) => (
+          {dataEngineerCopy.mentors.map((mentor, index) => (
             <div
               key={`schedule-${index}`}
               className="rounded-md bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 flex items-center"
