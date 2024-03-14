@@ -15,7 +15,7 @@ const DataAnalyticsMentor = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
           {dataAnalyticsCopy.mentors.map((mentor, index) => (
             <div
-              key={`schedule-${index}`}
+              key={`mentor-${index}`}
               className="rounded-md bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 flex items-center"
             >
               <Image
