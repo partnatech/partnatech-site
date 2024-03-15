@@ -13,8 +13,25 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#0d9488",
+          300: "#5eead4",
+          600: "#0d9488",
+          700: "#0f766e",
+          900: "#134e4a",
+        },
+        secondary: {
+          DEFAULT: "#a3e635",
+          400: "#a3e635",
+        },
+        accent: {
+          DEFAULT: "#242427",
+        },
+      },
       animation: {
-        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         scroll: {
@@ -31,7 +48,9 @@ module.exports = {
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
 
   addBase({
     ":root": newVars,

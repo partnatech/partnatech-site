@@ -34,7 +34,7 @@ export default function Page() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+          className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#36b49f] to-[#DBFF75] opacity-20"
           style={{
             clipPath:
               "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
@@ -60,13 +60,18 @@ export default function Page() {
               )}
             >
               <picture className="aspect-square flex-1 relative">
-                <Image fill src={event.image} className="object-cover rounded-md" alt={event.title} />
+                <Image
+                  fill
+                  src={event.image}
+                  className="object-cover rounded-md"
+                  alt={event.title}
+                />
               </picture>
 
               <div className="flex-[2] md:px-6 flex flex-col pt-5 md:pt-0">
                 <div className="mb-4">
                   <p className="font-semibold text-base  md:text-lg text-white">{event.title}</p>
-                  <span className="inline-flex items-center rounded-md bg-purple-400/10 px-2 py-1 text-sm font-medium text-purple-400 ring-1 ring-inset ring-purple-400/30">
+                  <span className="inline-flex items-center rounded-md bg-primary-900/10 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
                     {event.type}
                   </span>
                 </div>
@@ -77,7 +82,7 @@ export default function Page() {
                   </p>
                   <p className="mt-3">{event.time}</p>
                 </div>
-                <Link href={event.link} className="my-4 text-purple-400">
+                <Link href={event.link} className="my-4 text-primary-300">
                   {event.link.replace("https://", "")}
                 </Link>
                 {event.breakdown.map((breakdown, iBreakdown) => (

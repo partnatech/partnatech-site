@@ -33,7 +33,7 @@ export default function DataAnalyticsHero() {
             {dataAnalyticsCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}
-                className="items-center text-center rounded-md bg-purple-400/10 px-2 py-2 text-sm font-medium text-purple-400 ring-1 ring-inset ring-purple-400/30 mr-2 mb-2"
+                className="items-center text-center rounded-md bg-primary-900/10 px-2 py-2 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30 mr-2 mb-2"
               >
                 {badge.name}
               </span>
@@ -43,7 +43,7 @@ export default function DataAnalyticsHero() {
             <h4 className="mt-10 text-sm font- tracking-tight text-neutral-500 sm:text-lg line-through">
               Rp. 3.500K
             </h4>
-            <h4 className="text-2xl mb-4 font-bold tracking-tight text-white sm:text-3xl">
+            <h4 className="text-2xl mb-4 font-bold tracking-tight text-secondary sm:text-3xl">
               Rp. 2.900K
             </h4>
             <span className="flex items-center">
@@ -57,7 +57,7 @@ export default function DataAnalyticsHero() {
               Early Bird promo until 20 March 2024
             </span>
             <Link href="https://tally.so/r/nr65Po" target="_blank">
-              <button className="rounded-md mt-4 bg-indigo-500 px-4 py-3 font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+              <button className="rounded-md mt-4 bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {dataAnalyticsCopy.cta}
               </button>
             </Link>

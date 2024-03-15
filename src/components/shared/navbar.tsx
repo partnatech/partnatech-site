@@ -64,7 +64,7 @@ export default function Navbar() {
                   className={`
                   ${
                     pathname === link.href
-                      ? cn(navigationMenuTriggerStyle(), "text-indigo-300")
+                      ? cn(navigationMenuTriggerStyle(), "text-primary")
                       : navigationMenuTriggerStyle()
                   }
                 `}
@@ -86,7 +86,7 @@ export default function Navbar() {
 function Logo() {
   return (
     <Link href="/">
-      <div className="font-black hover:text-primary text-2xl transition-colors ease-linear duration-300">
+      <div className="font-black text-2xl transition-colors ease-linear duration-300">
         partnatech
       </div>
     </Link>
