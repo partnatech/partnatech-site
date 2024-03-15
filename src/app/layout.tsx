@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Partnatech | Building bridge between talent and the industry",
-  description: "Learn in-demand data skills and engineering expertise to land your dream industry role. We bridge the gap between talent and opportunity, equipping you with the knowledge and tools to thrive in today's data-driven world.",
+  description: "Learn in-demand data skills and engineering expertise to land your dream industry role.",
   twitter: {
     title: 'Partnatech',
     description: 'Building bridge between talent and the industry',

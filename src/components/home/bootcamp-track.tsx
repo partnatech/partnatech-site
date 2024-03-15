@@ -39,7 +39,7 @@ export function BootcampTrack() {
                       </ul>
                     </div>
                     <div className="text-center">
-                      <h1 className="font-semibold">Onboarding Date</h1>
+                      <h3 className="font-semibold">Onboarding Date</h3>
                       <p className="text-sm">April 17th, 2024</p>
                     </div>
                     <div>
