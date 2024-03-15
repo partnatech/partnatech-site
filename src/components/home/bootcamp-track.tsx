@@ -30,9 +30,9 @@ export function BootcampTrack() {
                 <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 dark:bg-zinc-900">
                   <div className="space-y-8 min-h-[240px] flex justify-between flex-col">
                     <div>
-                      <p className="lg:text-2xl text-center font-semibold text-base text-white mt-4 mb-2 dark:text-neutral-200">
+                      <h2 className="lg:text-2xl text-center font-semibold text-base text-white mt-4 mb-2 dark:text-neutral-200">
                         {program.name}
-                      </p>
+                      </h2>
                       <ul className="text-sm text-gray-400 flex justify-center gap-3 list-disc list-inside">
                         <li>Live Class</li>
                         <li>{program.duration}</li>
