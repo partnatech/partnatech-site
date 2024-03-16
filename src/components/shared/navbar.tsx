@@ -64,7 +64,7 @@ export default function Navbar() {
                   className={`
                   ${
                     pathname === link.href
-                      ? cn(navigationMenuTriggerStyle(), "text-primary")
+                      ? cn(navigationMenuTriggerStyle(), "opacity-100")
                       : navigationMenuTriggerStyle()
                   }
                 `}

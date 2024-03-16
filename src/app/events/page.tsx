@@ -5,6 +5,16 @@ import React from "react";
 
 const events = [
   {
+    image: "/assets/images/events/podfast1.png",
+    title: "Data Engineering Career and Job Landscape",
+    mentorName: "Rahul M.",
+    mentorCompany: "Stealth Mode Company",
+    mentorJob: "Data Engineer",
+    time: "March 16th, 4:30pm",
+    link: "https://bit.ly/podfast1",
+    type: "partnatalks series 1",
+  },
+  {
     image: "/assets/images/events/airflow-dbt-integration.png",
     title: "airflow-dbt-integration",
     mentorName: "Ahmad Shohibus Sulthoni",
@@ -85,7 +95,8 @@ export default function Page() {
                 <Link href={event.link} className="my-4 text-primary-300">
                   {event.link.replace("https://", "")}
                 </Link>
-                {event.breakdown.map((breakdown, iBreakdown) => (
+
+                {event.breakdown?.map((breakdown, iBreakdown) => (
                   <div key={`event-${index}-breakdown-${iBreakdown}`}>
                     <p className="text-white">{breakdown.title}</p>
                     <ul>
