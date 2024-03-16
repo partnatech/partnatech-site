@@ -119,7 +119,7 @@ export default function Page() {
       </div>
 
       <div className="max-w-7xl mx-auto mt-8">
-        <h3 className="text-center font-bold text-2xl md:text-4xl">Past Events and Workshop</h3>
+        <h3 className="text-center font-bold text-2xl md:text-4xl">Past Events and Workshops</h3>
         <div
           className={cn("w-4/5 mx-auto grid grid-cols-3 mt-6 gap-8", {
             "flex items-center justify-center": pastEvents.length === 1,
