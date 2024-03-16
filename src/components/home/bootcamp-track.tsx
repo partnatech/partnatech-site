@@ -62,7 +62,7 @@ export function BootcampTrack() {
 
       <div className="flex justify-center py-2">
         <Link href="/programs/scholarship">
-          <button className="rounded-md px-4 py-3 font-semibold text-white ring-2 ring-white shadow-sm hover:underline">
+          <button className="rounded-md px-4 py-3 font-semibold text-white ring-2 ring-primary-700 shadow-sm hover:bg-teal-500 bg-primary">
             Apply for a scholarship
           </button>
         </Link>

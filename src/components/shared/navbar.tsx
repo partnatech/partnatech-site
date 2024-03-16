@@ -16,62 +16,37 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/utils/cn";
 import { Button } from "@/components/ui/button";
 
-interface Link {
+interface NavLink {
   label: string;
-  href: {
-    pathname: string;
-    id: string;
-  };
+  href: string;
 }
 
-const links = [
+const links: NavLink[] = [
   {
     label: "About",
-    href: {
-      pathname: "/about",
-      id: "#",
-    },
+    href: "/about",
   },
   {
     label: "Programs",
-    href: {
-      pathname: "/programs",
-      id: "",
-    },
+    href: "/programs",
   },
   {
     label: "Learn",
-    href: {
-      pathname: "/learn",
-      id: "",
-    },
+    href: "/learn",
   },
   {
     label: "Business",
-    href: {
-      pathname: "/business",
-      id: "#business",
-    },
+    href: "/business",
   },
   {
     label: "Event",
-    href: {
-      pathname: "/events",
-      id: "",
-    },
+    href: "/events",
   },
   {
     label: "Blog",
-    href: {
-      pathname: "/blog",
-      id: "#blog",
-    },
+    href: "/blog",
   },
 ];
-
-function pathCheck(pathname: string, obj: Link) {
-  return pathname === obj.href.pathname ? obj.href.id : obj.href.pathname + obj.href.id;
-}
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -85,8 +60,14 @@ export default function Navbar() {
             {links.map((link, idx) => (
               <NavigationMenuItem key={idx}>
                 <NavigationMenuLink
-                  href={pathCheck(pathname, link)}
-                  className={navigationMenuTriggerStyle()}
+                  href={link.href}
+                  className={`
+                  ${
+                    pathname === link.href
+                      ? cn(navigationMenuTriggerStyle(), "opacity-100")
+                      : navigationMenuTriggerStyle()
+                  }
+                `}
                 >
                   {link.label}
                 </NavigationMenuLink>
@@ -105,7 +86,7 @@ export default function Navbar() {
 function Logo() {
   return (
     <Link href="/">
-      <div className="font-black hover:text-primary text-2xl transition-colors ease-linear duration-300">
+      <div className="font-black text-2xl transition-colors ease-linear duration-300">
         partnatech
       </div>
     </Link>
@@ -134,7 +115,7 @@ function MobileNav() {
               onClick={() => setOpen(false)}
               asChild
             >
-              <Link href={pathCheck(pathname, link)}>{link.label}</Link>
+              <Link href={link.href}>{link.label}</Link>
             </Button>
           ))}
         </div>
