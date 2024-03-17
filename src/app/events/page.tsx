@@ -14,25 +14,31 @@ const events = [
     link: "https://bit.ly/podfast1",
     type: "partnatalks series 1",
   },
+  // {
+  //   image: "/assets/images/events/airflow-dbt-integration.png",
+  //   title: "airflow-dbt-integration",
+  //   mentorName: "Ahmad Shohibus Sulthoni",
+  //   mentorCompany: "Tech Company",
+  //   mentorJob: "Senior Data Analyst",
+  //   time: "March 12th - 14th, 8:30pm",
+  //   link: "https://bit.ly/ws1-partnalearn",
+  //   type: "workshop series 1",
+  //   breakdown: [
+  //     {
+  //       title: "airflow-dbt-integration",
+  //       items: [
+  //         "Day 1: Getting Started with Airflow",
+  //         "Day 2: Data Build Tool (dbt) Introduction",
+  //         "Day 3 : Orchestrate your transformation workflow with Airflow",
+  //       ],
+  //     },
+  //   ],
+  // },
+];
+
+const pastEvents = [
   {
     image: "/assets/images/events/airflow-dbt-integration.png",
-    title: "airflow-dbt-integration",
-    mentorName: "Ahmad Shohibus Sulthoni",
-    mentorCompany: "Tech Company",
-    mentorJob: "Senior Data Analyst",
-    time: "March 12th - 14th, 8:30pm",
-    link: "https://bit.ly/ws1-partnalearn",
-    type: "workshop series 1",
-    breakdown: [
-      {
-        title: "airflow-dbt-integration",
-        items: [
-          "Day 1: Getting Started with Airflow",
-          "Day 2: Data Build Tool (dbt) Introduction",
-          "Day 3 : Orchestrate your transformation workflow with Airflow",
-        ],
-      },
-    ],
   },
 ];
 
@@ -52,7 +58,7 @@ export default function Page() {
         />
       </div>
       <div className="max-w-7xl mx-auto mt-12">
-        <h1 className="text-center font-bold text-2xl md:text-4xl">Our Events and Workshops</h1>
+        <h3 className="text-center font-bold text-2xl md:text-4xl">Our Events and Workshops</h3>
 
         <div
           className={cn("flex items-center overflow-x-scroll scroll-custom py-6", {
@@ -96,7 +102,7 @@ export default function Page() {
                   {event.link.replace("https://", "")}
                 </Link>
 
-                {event.breakdown?.map((breakdown, iBreakdown) => (
+                {/* {event.breakdown?.map((breakdown, iBreakdown) => (
                   <div key={`event-${index}-breakdown-${iBreakdown}`}>
                     <p className="text-white">{breakdown.title}</p>
                     <ul>
@@ -105,9 +111,29 @@ export default function Page() {
                       ))}
                     </ul>
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto mt-8">
+        <h3 className="text-center font-bold text-2xl md:text-4xl">Past Events and Workshops</h3>
+        <div
+          className={cn("w-4/5 mx-auto grid grid-cols-3 mt-6 gap-8", {
+            "flex items-center justify-center": pastEvents.length === 1,
+          })}
+        >
+          {pastEvents.map((pastEvent, index) => (
+            <Image
+              key={`past-event-${index}`}
+              width={300}
+              height={300}
+              src={pastEvent.image}
+              className="object-cover rounded-md"
+              alt={pastEvent.image}
+            />
           ))}
         </div>
       </div>
