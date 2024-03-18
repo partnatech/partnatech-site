@@ -11,9 +11,9 @@ export function BootcampTrack() {
   const isOdd = programs.length % 2 !== 0;
   return (
     <>
-      <h1 className="text-3xl text-center mb-4" id="programs">
+      <h2 className="text-3xl text-center mb-4" id="programs">
         Our Programs
-      </h1>
+      </h2>
 
       <div className="">
         <div className="max-w-xs lg:max-w-3xl  mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-8">

@@ -25,9 +25,9 @@ export default function DataAnalyticsHero() {
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:flex lg:px-8">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h2 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             {dataAnalyticsCopy.title}
-          </h1>
+          </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">{dataAnalyticsCopy.description}</p>
           <div className="flex flex-wrap w-full mt-4">
             {dataAnalyticsCopy.badges.map((badge, index) => (
