@@ -40,22 +40,9 @@ export default function DataEngineerHero() {
             ))}
           </div>
           <div className="mt-10">
-            <h4 className="mt-10 text-sm font- tracking-tight text-neutral-500 sm:text-lg line-through">
+            <h4 className="text-2xl mb-4 font-bold tracking-tight text-secondary sm:text-3xl">
               Rp. 5.500K
             </h4>
-            <h4 className="text-2xl mb-4 font-bold tracking-tight text-secondary sm:text-3xl">
-              Rp. 4.900K
-            </h4>
-            <span className="flex items-center">
-              <svg
-                className="h-2 w-2 fill-red-500 animate-pulse mr-4"
-                viewBox="0 0 6 6"
-                aria-hidden="true"
-              >
-                <circle cx={3} cy={3} r={3} />
-              </svg>{" "}
-              Early Bird promo until 17 March 2024
-            </span>
             <Link href="https://tally.so/r/mYQPaN" target="_blank">
               <button className="rounded-md mt-4 bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {dataEngineerCopy.cta}
