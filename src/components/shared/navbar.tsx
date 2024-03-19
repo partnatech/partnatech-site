@@ -15,6 +15,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/utils/cn";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface NavLink {
   label: string;
@@ -86,8 +87,9 @@ export default function Navbar() {
 function Logo() {
   return (
     <Link href="/">
-      <div className="font-black text-2xl transition-colors ease-linear duration-300">
-        partnatech
+      <div className="font-black text-2xl transition-colors ease-linear duration-300 flex items-center gap-2">
+        <Image className="h-7" src="/partnatech_1.png" alt="partnatech" width={30} height={120} />
+        <p>partnatech</p>
       </div>
     </Link>
   );
