@@ -1,5 +1,5 @@
 export const homeCopy = {
-  headline: "PartnaLearn - Building bridge between talents and the industry",
+  headline: "PartnaLearn - the real upskilling platform",
   description:
     "We gathered seasoned data professionals and educators to bridge more talents to the industry, our commitment is to deliver an unparalleled learning experience that equips students with the practical skills and strong fundamental knowledge required to succeed in the industry.",
 

@@ -5,14 +5,16 @@ import React from "react";
 
 const events = [
   {
-    image: "/assets/images/events/podfast1.png",
-    title: "Data Engineering Career and Job Landscape",
-    mentorName: "Rahul M.",
-    mentorCompany: "Stealth Mode Company",
-    mentorJob: "Data Engineer",
-    time: "March 16th, 4:30pm",
-    link: "https://bit.ly/podfast1",
-    type: "partnatalks series 1",
+    image: "/assets/images/events/podfast2.png",
+    title: "Data Engineering 101 - Fundamentals of Data Pipeline",
+    guestName: "Adam Widi Bagaskarta",
+    guestCompany: "Tech Company",
+    guestJob: "Data Engineer",
+    hostName: "Rahadian Rizki",
+    time: "March 28th, 8:30pm",
+    youtube: "https://youtube.com/@partnatech",
+    x: "https://x.com/rahadianrizkiii",
+    type: "partnatalks series 2",
   },
   // {
   //   image: "/assets/images/events/airflow-dbt-integration.png",
@@ -37,6 +39,9 @@ const events = [
 ];
 
 const pastEvents = [
+  {
+    image: "/assets/images/events/podfast1.png",
+  },
   {
     image: "/assets/images/events/airflow-dbt-integration.png",
   },
@@ -84,23 +89,30 @@ export default function Page() {
                 />
               </picture>
 
-              <div className="flex-[2] md:px-6 flex flex-col pt-5 md:pt-0">
+              <div className="flex-[2] md:px-6 flex flex-col pt-5 md:pt-0 justify-between">
                 <div className="mb-4">
-                  <p className="font-semibold text-base  md:text-lg text-white">{event.title}</p>
-                  <span className="inline-flex items-center rounded-md bg-primary-900/10 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
+                  <p className="font-semibold text-base  md:text-xl text-white">{event.title}</p>
+                  <span className="inline-flex items-center rounded-md bg-primary-900/10 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30 mt-2">
                     {event.type}
                   </span>
                 </div>
                 <div className="font-semibold text-white my-4 md:my-0">
-                  <p>by: {event.mentorName}</p>
+                  <p>Guest Speaker: </p>
+                  <p>{event.guestName}</p>
                   <p>
-                    {event.mentorJob} at {event.mentorCompany}
+                    {event.guestJob} at {event.guestCompany}
                   </p>
                   <p className="mt-3">{event.time}</p>
                 </div>
-                <Link href={event.link} className="my-4 text-primary-300">
-                  {event.link.replace("https://", "")}
-                </Link>
+                <div className="flex flex-col">
+                  <p className="text-white">Live on:</p>
+                  <Link href={event.youtube} className="text-primary-300" target="_blank">
+                    {event.youtube.replace("https://", "")}
+                  </Link>
+                  <Link href={event.x} className="text-primary-300" target="_blank">
+                    {event.x.replace("https://", "")}
+                  </Link>
+                </div>
 
                 {/* {event.breakdown?.map((breakdown, iBreakdown) => (
                   <div key={`event-${index}-breakdown-${iBreakdown}`}>
@@ -121,7 +133,7 @@ export default function Page() {
       <div className="max-w-7xl mx-auto mt-8">
         <h3 className="text-center font-bold text-2xl md:text-4xl">Past Events and Workshops</h3>
         <div
-          className={cn("w-4/5 mx-auto grid grid-cols-3 mt-6 gap-8", {
+          className={cn("w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-3 mt-6 gap-8", {
             "flex items-center justify-center": pastEvents.length === 1,
           })}
         >
@@ -131,7 +143,7 @@ export default function Page() {
               width={300}
               height={300}
               src={pastEvent.image}
-              className="object-cover rounded-md"
+              className="object-cover rounded-md w-[300px] h-[300px]"
               alt={pastEvent.image}
             />
           ))}
