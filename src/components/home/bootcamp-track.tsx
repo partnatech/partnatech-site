@@ -7,12 +7,7 @@ import { homeCopy } from "@/utils/i18n/home";
 export function BootcampTrack() {
   return (
     <div>
-      <h2
-        className="mb-12 text-center text-3xl font-bold md:text-3xl"
-        id="programs"
-      >
-        Our Programs
-      </h2>
+      <h2 className="mb-12 text-center text-3xl font-bold md:text-3xl">Our Programs</h2>
       <div className="mx-auto grid  max-w-xs grid-cols-1 gap-8 lg:max-w-7xl lg:grid-cols-3 lg:gap-16">
         {homeCopy.programs.map((program, index) => {
           return (
