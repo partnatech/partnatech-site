@@ -5,7 +5,7 @@ import { StudentTestimonials } from "@/components/home/student-testimonials";
 
 export default function Page() {
   return (
-    <div className="lg:space-y-32 space-y-16 p-4">
+    <div className="space-y-16 p-4 lg:space-y-32">
       <HomeHero />
       <ClientAndPartner />
       <BootcampTrack />

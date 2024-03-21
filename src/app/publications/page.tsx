@@ -9,13 +9,15 @@ export default function page() {
     <div className="mt-12 space-y-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Videos</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Videos
+          </h2>
         </div>
         <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {publicationsCopy.videos.map((video, index) => (
             <div
               key={`video-${index}`}
-              className="flex flex-col items-start justify-between ring-1 ring-gray-400/20 py-8 px-4 ring-inset rounded-md bg-gray-400/10"
+              className="flex flex-col items-start justify-between rounded-md bg-gray-400/10 px-4 py-8 ring-1 ring-inset ring-gray-400/20"
             >
               <Link href={video.href} target="_blank">
                 <div className="relative w-full">
@@ -35,7 +37,7 @@ export default function page() {
                 <time dateTime={video.datetime} className="text-xs">
                   {video.date}
                 </time>
-                <div className="flex items-center gap-x-4 text-xs mt-8">
+                <div className="mt-8 flex items-center gap-x-4 text-xs">
                   {video.categories.map((category, index) => (
                     <p
                       key={`category-${index}`}
@@ -53,7 +55,9 @@ export default function page() {
                       {video.title}
                     </Link>
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6">{video.description}</p>
+                  <p className="mt-5 line-clamp-3 text-sm leading-6">
+                    {video.description}
+                  </p>
                 </div>
               </div>
             </div>
@@ -63,15 +67,17 @@ export default function page() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Blog</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Blog
+          </h2>
         </div>
         <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {publicationsCopy.blogs.map((blog) => (
             <Link href={blog.mediumUrl} key={blog.id} target="_blank">
-              <div className="flex max-w-xl flex-col items-start justify-between bg-gray-400/10 ring-1 ring-gray-400/20 rounded-md py-8 px-4">
+              <div className="flex max-w-xl flex-col items-start justify-between rounded-md bg-gray-400/10 px-4 py-8 ring-1 ring-gray-400/20">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={blog.datetime}>{blog.date}</time>
-                  <p className="relative z-10 rounded-full px-3 py-1.5 font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30 bg-primary-900/10">
+                  <p className="relative z-10 rounded-full bg-primary-900/10 px-3 py-1.5 font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
                     {blog.category.title}
                   </p>
                 </div>
@@ -82,7 +88,9 @@ export default function page() {
                       {blog.title}
                     </p>
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6">{blog.description}</p>
+                  <p className="mt-5 line-clamp-3 text-sm leading-6">
+                    {blog.description}
+                  </p>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <Image

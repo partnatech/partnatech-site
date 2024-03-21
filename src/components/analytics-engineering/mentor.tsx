@@ -1,5 +1,4 @@
 import { analyticsEngineeringCopy } from "@/utils/i18n/analytics-engineering";
-import { dataEngineerCopy } from "@/utils/i18n/data-engineering";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,15 +7,15 @@ import React from "react";
 const AnalyticsEngineeringMentor = () => {
   return (
     <div className="relative isolate overflow-hidden">
-      <h2 className="mt-10 text-2xl font-bold tracking-tight text-white sm:text-4xl text-center">
+      <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
         {analyticsEngineeringCopy.mentorTitle}
       </h2>
-      <div className="mx-auto max-w-7xl lg:px-8 px-5 mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+      <div className="mx-auto mt-10 max-w-7xl px-5 lg:px-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-10">
           {analyticsEngineeringCopy.mentors.map((mentor, index) => (
             <div
               key={`mentor-${index}`}
-              className="rounded-md bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 flex items-center"
+              className="flex items-center rounded-md bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
             >
               <Image
                 src={mentor.image}
@@ -27,8 +26,8 @@ const AnalyticsEngineeringMentor = () => {
               />
 
               <div className="">
-                <p className="font-semibold text-lg">{mentor.name}</p>
-                <p className="text-xs text-neutral-400 my-2">{mentor.job}</p>
+                <p className="text-lg font-semibold">{mentor.name}</p>
+                <p className="my-2 text-xs text-neutral-400">{mentor.job}</p>
                 <Link href={mentor.linkedin} target="_blank">
                   <LinkedInLogoIcon className="text-blue-600" />
                 </Link>
