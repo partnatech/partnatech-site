@@ -38,7 +38,7 @@ export function StudentTestimonials() {
                   />
                   <div className="flex flex-col items-start">
                     <h6 className="text-base font-bold text-white">{testimonial.name}</h6>
-                    <p className="text-sm text-white sm:text-sm">{testimonial.title}</p>
+                    <p className="text-xs text-white sm:text-xs">{testimonial.title}</p>
                     <Link href={testimonial.linkedin} target="_blank">
                       <LinkedInLogoIcon className="text-blue-600" />
                     </Link>
