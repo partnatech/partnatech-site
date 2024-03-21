@@ -18,8 +18,8 @@ export default function DataEngineerHero() {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-10 mt-12 flex flex-col items-center space-y-4">
-        <div className="inline-flex items-center text-center rounded-full bg-secondary/10 px-6 py-2 text-sm font-semibold text-secondary ring-1 ring-inset ring-secondary/30">
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center space-y-4 px-6 py-10">
+        <div className="inline-flex items-center rounded-full bg-secondary/10 px-6 py-2 text-center text-sm font-semibold text-secondary ring-1 ring-inset ring-secondary/30">
           {dataEngineerCopy.chip}
         </div>
       </div>
@@ -28,30 +28,32 @@ export default function DataEngineerHero() {
           <h2 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             {dataEngineerCopy.title}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerCopy.description}</p>
-          <div className="flex flex-wrap w-full mt-4">
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            {dataEngineerCopy.description}
+          </p>
+          <div className="mt-4 flex w-full flex-wrap">
             {dataEngineerCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}
-                className="items-center text-center rounded-md bg-primary-900/10 px-2 py-2 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30 mr-2 mb-2"
+                className="mb-2 mr-2 items-center rounded-md bg-primary-900/10 px-2 py-2 text-center text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30"
               >
                 {badge.name}
               </span>
             ))}
           </div>
           <div className="mt-10">
-            <h4 className="text-2xl mb-4 font-bold tracking-tight text-secondary sm:text-3xl">
+            <h4 className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
               Rp. 5.500K
             </h4>
             <Link href="https://tally.so/r/mYQPaN" target="_blank">
-              <button className="rounded-md mt-4 bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+              <button className="mt-4 rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {dataEngineerCopy.cta}
               </button>
             </Link>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex lg:flex-1 max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-16 lg:max-w-none xl:ml-32">
-          <div className="aspect-square w-full rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 relative overflow-hidden">
+        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-16 lg:max-w-none lg:flex-1 xl:ml-32">
+          <div className="relative aspect-square w-full overflow-hidden rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10">
             <Image
               src="/assets/images/hero-image.jpg"
               alt="Hero Image"

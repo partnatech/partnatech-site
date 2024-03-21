@@ -10,7 +10,7 @@ function classNames(...classes: any) {
 
 export default function Page() {
   return (
-    <div className="relative isolate overflow-hidden min-h-screen">
+    <div className="relative isolate min-h-screen overflow-hidden">
       <div
         className="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
         aria-hidden="true"
@@ -23,21 +23,23 @@ export default function Page() {
           }}
         />
       </div>
-      <div className="max-w-7xl mx-auto mt-12">
-        <h1 className="text-center font-bold text-2xl md:text-4xl">Programs - Scholarship</h1>
+      <div className="mx-auto mt-12 max-w-7xl">
+        <h1 className="text-center text-2xl font-bold md:text-4xl">
+          Programs - Scholarship
+        </h1>
 
-        <div className="py-6 gap-8 grid grid-cols-1 lg:grid-cols-2 px-4">
+        <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:grid-cols-2">
           <div
             className={cn(
-              "md:w-full w-[90%] shrink-0 flex flex-col md:flex-row bg-gray-400/10 p-4 md:p-8 rounded-lg font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
+              "flex w-[90%] shrink-0 flex-col rounded-lg bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 md:w-full md:flex-row md:p-8",
             )}
           >
-            <div className="flex-[2] md:px-6 flex flex-col pt-5 md:pt-0">
+            <div className="flex flex-[2] flex-col pt-5 md:px-6 md:pt-0">
               <div className="mb-4">
-                <p className="font-semibold text-lg md:text-lg lg:text-2xl text-white">
+                <p className="text-lg font-semibold text-white md:text-lg lg:text-2xl">
                   Persyaratan
                 </p>
-                <ul className="list-disc list-inside mt-5">
+                <ul className="mt-5 list-inside list-disc">
                   {scholarshipCopy.requirements.map((requirement, index) => (
                     <li key={`requirement-${index}`}>{requirement.item}</li>
                   ))}
@@ -53,7 +55,7 @@ export default function Page() {
               Worry not. We have the scholarship track.
             </p>
             <p className=" text-lg leading-8 text-gray-300">Tahapan</p>
-            <ul className="list-inside mt-5">
+            <ul className="mt-5 list-inside">
               {scholarshipCopy.steps.map((step, index) => (
                 <li key={`step-${index}`}>
                   {step.number}. {step.text}
@@ -65,7 +67,7 @@ export default function Page() {
               <span className="italic">letter of motivation</span>.
             </p>
             <div className="flex items-center gap-4">
-              <p className="text-lg items-center">Siap mendaftar? </p>
+              <p className="items-center text-lg">Siap mendaftar? </p>
               <Link href="https://tally.so/r/woybae" target="_blank">
                 <button className="rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                   Isi Form

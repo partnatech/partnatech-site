@@ -26,12 +26,12 @@ export const ClientAndPartner = () => {
         <h5 className="mb-6 text-center text-xl font-bold md:mb-10 lg:mb-12">
           Our Featured Clients
         </h5>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-12 md:grid-cols-4 md:gap-6 items-center">
+        <div className="grid grid-cols-2 items-center gap-8 sm:grid-cols-3 sm:gap-12 md:grid-cols-4 md:gap-6">
           {partners.map((partner, index) => {
             return (
               <div
                 key={`partner-${index}`}
-                className="bg-accent/50 h-[70px] items-center flex rounded-md"
+                className="flex h-[70px] items-center rounded-md bg-accent/50"
               >
                 <Image
                   className="mx-auto"

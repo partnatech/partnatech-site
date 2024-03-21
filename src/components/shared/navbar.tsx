@@ -53,8 +53,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className={`min-w-screen sticky top-0 z-20 backdrop-blur-lg backdrop-filter`}>
-      <div className="container mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-3 items-center py-6 px-4">
+    <div
+      className={`min-w-screen sticky top-0 z-20 backdrop-blur-lg backdrop-filter`}
+    >
+      <div className="container mx-auto grid max-w-7xl grid-cols-2 items-center px-4 py-6 lg:grid-cols-3">
         <Logo />
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList>
@@ -87,8 +89,14 @@ export default function Navbar() {
 function Logo() {
   return (
     <Link href="/">
-      <div className="font-black text-2xl transition-colors ease-linear duration-300 flex items-center gap-2">
-        <Image className="h-7" src="/partnatech_1.png" alt="partnatech" width={30} height={120} />
+      <div className="flex items-center gap-2 text-2xl font-black transition-colors duration-300 ease-linear">
+        <Image
+          className="h-7"
+          src="/partnatech_1.png"
+          alt="partnatech"
+          width={30}
+          height={120}
+        />
         <p>partnatech</p>
       </div>
     </Link>
@@ -103,7 +111,7 @@ function MobileNav() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild className="lg:hidden">
         <Button variant={"ghost"} size={"icon"} onClick={() => setOpen(true)}>
-          <Menu className="w-6 h-6" />
+          <Menu className="h-6 w-6" />
         </Button>
       </SheetTrigger>
       <SheetContent className="w-48 pt-10">

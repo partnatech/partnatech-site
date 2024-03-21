@@ -49,7 +49,7 @@ const pastEvents = [
 
 export default function Page() {
   return (
-    <div className="relative isolate overflow-hidden min-h-screen">
+    <div className="relative isolate min-h-screen overflow-hidden">
       <div
         className="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
         aria-hidden="true"
@@ -62,41 +62,48 @@ export default function Page() {
           }}
         />
       </div>
-      <div className="max-w-7xl mx-auto mt-12">
-        <h3 className="text-center font-bold text-2xl md:text-4xl">Our Events and Workshops</h3>
+      <div className="mx-auto mt-12 max-w-7xl">
+        <h3 className="text-center text-2xl font-bold md:text-4xl">
+          Our Events and Workshops
+        </h3>
 
         <div
-          className={cn("flex items-center overflow-x-scroll scroll-custom py-6", {
-            "justify-center": events.length === 1,
-          })}
+          className={cn(
+            "scroll-custom flex items-center overflow-x-scroll py-6",
+            {
+              "justify-center": events.length === 1,
+            },
+          )}
         >
           {events.map((event, index) => (
             <div
               key={`event-${index}`}
               className={cn(
-                "md:w-4/5 w-[90%] shrink-0 flex flex-col md:flex-row bg-gray-400/10 p-4 md:p-8 rounded-lg font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20",
+                "flex w-[90%] shrink-0 flex-col rounded-lg bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 md:w-4/5 md:flex-row md:p-8",
                 {
                   "mr-4": events.length > 1,
-                }
+                },
               )}
             >
-              <picture className="aspect-square flex-1 relative">
+              <picture className="relative aspect-square flex-1">
                 <Image
                   fill
                   src={event.image}
-                  className="object-cover rounded-md"
+                  className="rounded-md object-cover"
                   alt={event.title}
                 />
               </picture>
 
-              <div className="flex-[2] md:px-6 flex flex-col pt-5 md:pt-0 justify-between">
+              <div className="flex flex-[2] flex-col justify-between pt-5 md:px-6 md:pt-0">
                 <div className="mb-4">
-                  <p className="font-semibold text-base  md:text-xl text-white">{event.title}</p>
-                  <span className="inline-flex items-center rounded-md bg-primary-900/10 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30 mt-2">
+                  <p className="text-base font-semibold  text-white md:text-xl">
+                    {event.title}
+                  </p>
+                  <span className="mt-2 inline-flex items-center rounded-md bg-primary-900/10 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
                     {event.type}
                   </span>
                 </div>
-                <div className="font-semibold text-white my-4 md:my-0">
+                <div className="my-4 font-semibold text-white md:my-0">
                   <p>Guest Speaker: </p>
                   <p>{event.guestName}</p>
                   <p>
@@ -106,10 +113,18 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col">
                   <p className="text-white">Live on:</p>
-                  <Link href={event.youtube} className="text-primary-300" target="_blank">
+                  <Link
+                    href={event.youtube}
+                    className="text-primary-300"
+                    target="_blank"
+                  >
                     {event.youtube.replace("https://", "")}
                   </Link>
-                  <Link href={event.x} className="text-primary-300" target="_blank">
+                  <Link
+                    href={event.x}
+                    className="text-primary-300"
+                    target="_blank"
+                  >
                     {event.x.replace("https://", "")}
                   </Link>
                 </div>
@@ -130,12 +145,17 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-8">
-        <h3 className="text-center font-bold text-2xl md:text-4xl">Past Events and Workshops</h3>
+      <div className="mx-auto mt-8 max-w-7xl">
+        <h3 className="text-center text-2xl font-bold md:text-4xl">
+          Past Events and Workshops
+        </h3>
         <div
-          className={cn("w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-3 mt-6 gap-8", {
-            "flex items-center justify-center": pastEvents.length === 1,
-          })}
+          className={cn(
+            "mx-auto mt-6 grid w-4/5 grid-cols-1 gap-8 lg:grid-cols-3",
+            {
+              "flex items-center justify-center": pastEvents.length === 1,
+            },
+          )}
         >
           {pastEvents.map((pastEvent, index) => (
             <Image
@@ -143,7 +163,7 @@ export default function Page() {
               width={300}
               height={300}
               src={pastEvent.image}
-              className="object-cover rounded-md w-[300px] h-[300px]"
+              className="h-[300px] w-[300px] rounded-md object-cover"
               alt={pastEvent.image}
             />
           ))}
