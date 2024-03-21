@@ -6,15 +6,15 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <div className="sm:py-12 mt-12 space-y-16">
+    <div className="mt-12 space-y-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Videos</h2>
         </div>
-        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {publicationsCopy.videos.map((video) => (
+        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {publicationsCopy.videos.map((video, index) => (
             <div
-              key={video.id}
+              key={`video-${index}`}
               className="flex flex-col items-start justify-between ring-1 ring-gray-400/20 py-8 px-4 ring-inset rounded-md bg-gray-400/10"
             >
               <Link href={video.href} target="_blank">
@@ -22,7 +22,7 @@ export default function page() {
                   <iframe
                     width="560"
                     height="240"
-                    src="https://www.youtube.com/embed/nnaYrucSqDU?si=ZIo9HjshPbM7Sg27"
+                    src={video.embedUrl}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     className="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
@@ -32,12 +32,20 @@ export default function page() {
               </Link>
 
               <div className="max-w-xl">
-                <div className="mt-8 flex items-center gap-x-4 text-xs">
-                  <time dateTime={video.datetime}>{video.date}</time>
-                  <p className="relative z-10 rounded-full bg-primary-900/10 px-3 py-1.5 font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
-                    {video.category.title}
-                  </p>
+                <time dateTime={video.datetime} className="text-xs">
+                  {video.date}
+                </time>
+                <div className="flex items-center gap-x-4 text-xs mt-8">
+                  {video.categories.map((category, index) => (
+                    <p
+                      key={`category-${index}`}
+                      className="relative z-10 rounded-full bg-primary-900/10 px-3 py-1.5 font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30"
+                    >
+                      {category.title}
+                    </p>
+                  ))}
                 </div>
+
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6">
                     <Link href={video.href}>
