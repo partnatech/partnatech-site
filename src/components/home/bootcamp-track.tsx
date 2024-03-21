@@ -6,11 +6,10 @@ import { homeCopy } from "@/utils/i18n/home";
 
 export function BootcampTrack() {
   return (
-    <>
-      <h2 className="text-center text-3xl font-bold md:text-3xl" id="programs">
+    <div>
+      <h2 className="text-center text-3xl font-bold md:text-3xl mb-12" id="programs">
         Our Programs
       </h2>
-
       <div className="max-w-xs lg:max-w-7xl  mx-auto grid grid-cols-1 lg:grid-cols-3 lg:gap-16 gap-8">
         {homeCopy.programs.map((program, index) => {
           return (
@@ -46,14 +45,13 @@ export function BootcampTrack() {
           );
         })}
       </div>
-
-      <div className="flex justify-center py-2">
+      <div className="flex justify-center pt-12">
         <Link href="/programs/scholarship">
           <button className="rounded-md px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 bg-primary">
             Apply for a scholarship
           </button>
         </Link>
       </div>
-    </>
+    </div>
   );
 }

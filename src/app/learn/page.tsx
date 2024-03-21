@@ -16,9 +16,9 @@ export default function Page() {
           }}
         />
       </div>
-      <div className="max-w-4xl mx-auto mt-12">
-        <div className="text-start font-bold text-2xl md:text-4xl space-y-8 lg:w-10/12 w-full">
-          <h1 className="">
+      <div className="max-w-7xl mx-auto mt-12">
+        <div className="text-start font-bold text-2xl md:text-4xl space-y-8">
+          <h1>
             We are developing a learning portal that can help you succeed in the technology field.
           </h1>
           <h1>Stay tuned.</h1>

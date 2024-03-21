@@ -44,8 +44,8 @@ const links: NavLink[] = [
     href: "/events",
   },
   {
-    label: "Blog",
-    href: "/blog",
+    label: "Publications",
+    href: "/publications",
   },
 ];
 

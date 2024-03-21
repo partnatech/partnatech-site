@@ -29,14 +29,18 @@ export const ClientAndPartner = () => {
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-12 md:grid-cols-4 md:gap-6 items-center">
           {partners.map((partner, index) => {
             return (
-              <Image
+              <div
                 key={`partner-${index}`}
-                className="mx-auto"
-                src={partner.url}
-                alt={partner.alt}
-                width={100}
-                height={20}
-              />
+                className="bg-accent/50 h-[70px] items-center flex rounded-md"
+              >
+                <Image
+                  className="mx-auto"
+                  src={partner.url}
+                  alt={partner.alt}
+                  width={100}
+                  height={20}
+                />
+              </div>
             );
           })}
         </div>
