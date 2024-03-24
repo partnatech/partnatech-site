@@ -17,7 +17,7 @@ export const scholarshipCopy = {
   requirements: [
     { item: "Tidak sedang dalam ikatan dinas ataupun masa kuliah" },
     {
-      item: "Lulus scholarship test dan sedang atau bersedia tinggal di daerah Jabodetabek setelah diterima",
+      item: "Lulus scholarship test dan jika diterima bekerja pada hiring partner untuk setting kerja onsite, peserta dapat menyesuaikan",
     },
     {
       item: "Setelah diterima, mampu melakukan pembayaran deposit 3 juta untuk commitment fee yang akan dikembalikan setelah periode bootcamp dan internship atau magang selesai",
