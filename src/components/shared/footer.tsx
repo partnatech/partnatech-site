@@ -1,24 +1,21 @@
 import Image from "next/image";
 
 const navigation = {
-  solutions: [
-    { name: "Marketing", href: "/" },
-    { name: "Analytics", href: "/" },
-    { name: "Commerce", href: "/" },
-    { name: "Insights", href: "/" },
+  about: [
+    { name: "About", href: "/about" },
+    { name: "Events", href: "/events" },
+    { name: "FAQ", href: "/" },
+    { name: "Publications", href: "/publications" },
   ],
-  support: [
-    { name: "Pricing", href: "/" },
-    { name: "Documentation", href: "/" },
-    { name: "Guides", href: "/" },
-    { name: "API Status", href: "/" },
+  business: [
+    { name: "Consulting Service", href: "/" },
+    { name: "Hiring Our Talents", href: "/" },
   ],
-  company: [
-    { name: "About", href: "/" },
-    { name: "Blog", href: "/" },
-    { name: "Jobs", href: "/" },
-    { name: "Press", href: "/" },
-    { name: "Partners", href: "/" },
+  programs: [
+    { name: "Analytics Engineering", href: "/programs/analytics-engineering" },
+    { name: "Data Analytics", href: "/programs/data-analytics" },
+    { name: "Data Engineering", href: "/programs/data-engineering" },
+    { name: "Scholarship", href: "/programs/scholarship" },
   ],
   legal: [
     { name: "Claim", href: "/" },
@@ -91,16 +88,12 @@ export default function Footer() {
             />
             <p className="text-2xl text-white">partnatech</p>
             <p className="text-sm leading-6 text-gray-300">
-              Office 8, Jl. Senopati 8B Lv.18A, Senayan, Kebayoran Baru, Kota
-              Jakarta Selatan, DKI Jakarta 12190
+              Office 8, Jl. Senopati 8B Lv.18A, Senayan, Kebayoran Baru, Kota Jakarta Selatan, DKI
+              Jakarta 12190
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-500 hover:text-gray-400"
-                >
+                <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
@@ -110,11 +103,9 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Solutions
-                </h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">About</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
+                  {navigation.about.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -127,11 +118,9 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Support
-                </h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">Business</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
+                  {navigation.business.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -146,11 +135,9 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Company
-                </h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">Programs</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
+                  {navigation.programs.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -163,9 +150,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Legal
-                </h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
