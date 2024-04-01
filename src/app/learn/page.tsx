@@ -16,13 +16,12 @@ export default function Page() {
           }}
         />
       </div>
-      <div className="mx-auto mt-12 max-w-7xl">
-        <div className="space-y-8 text-start text-2xl font-bold md:text-4xl">
+      <div className="mx-auto mt-12 max-w-7xl lg:px-6">
+        <div className="space-y-3 text-start text-lg lg:space-y-2 lg:text-3xl">
           <h1>
-            We are developing a learning portal that can help you succeed in the
-            technology field.
+            We are developing a learning portal that can help you succeed in the technology field.
           </h1>
-          <h1>Stay tuned.</h1>
+          <p>Stay tuned.</p>
         </div>
         <p className="mt-6 text-lg text-gray-300 lg:leading-8">
           Join waiting list and access our free resources below :
