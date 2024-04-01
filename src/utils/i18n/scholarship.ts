@@ -15,7 +15,9 @@ export const scholarshipCopy = {
   ],
 
   requirements: [
-    { item: "Tidak sedang dalam ikatan dinas ataupun masa kuliah" },
+    {
+      item: "Tidak sedang dalam ikatan dinas ataupun masa kuliah (jika semester akhir atau tidak ada mata kuliah yang ditempuh dipersilahkan apply, profil akan kita pertimbangkan)",
+    },
     {
       item: "Lulus scholarship test dan jika diterima bekerja pada hiring partner untuk setting kerja onsite, peserta dapat menyesuaikan",
     },
