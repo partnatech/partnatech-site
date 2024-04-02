@@ -150,7 +150,7 @@ export default function Page() {
       <div className="mx-auto mt-8 max-w-7xl">
         <h3 className="text-center text-2xl font-bold md:text-4xl">Past Events and Workshops</h3>
         <div
-          className={cn("mx-auto mt-6 grid w-4/5 grid-cols-1 gap-8 lg:grid-cols-3", {
+          className={cn("mx-auto mt-6 grid w-4/5  grid-cols-1 gap-8 lg:grid-cols-3", {
             "flex items-center justify-center": pastEvents.length === 1,
           })}
         >
@@ -160,7 +160,7 @@ export default function Page() {
               width={300}
               height={300}
               src={pastEvent.image}
-              className="h-[300px] w-[300px] rounded-md object-cover"
+              className="mx-auto h-[300px] w-[300px] rounded-md object-cover"
               alt={pastEvent.image}
             />
           ))}
