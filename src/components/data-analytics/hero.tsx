@@ -40,10 +40,22 @@ export default function DataAnalyticsHero() {
             ))}
           </div>
           <div className="mt-10">
-            <h4 className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
-              Rp. 2.900K
+            <h4 className="font- mt-10 text-sm tracking-tight text-neutral-500 line-through sm:text-lg">
+              Rp. 4.000K
             </h4>
-
+            <h4 className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
+              Rp. 3.500K
+            </h4>
+            <span className="flex items-center">
+              <svg
+                className="mr-4 h-2 w-2 animate-pulse fill-red-500"
+                viewBox="0 0 6 6"
+                aria-hidden="true"
+              >
+                <circle cx={3} cy={3} r={3} />
+              </svg>{" "}
+              April Sale
+            </span>
             <Link href="https://tally.so/r/nr65Po" target="_blank">
               <button className="mt-4 rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {dataAnalyticsCopy.cta}
