@@ -64,7 +64,7 @@ export default function DataEngineerHero() {
             </Link>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-16 lg:max-w-none lg:flex-1 xl:ml-32">
+        <div className="mx-auto mt-16 hidden max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-16 lg:flex lg:max-w-none lg:flex-1 xl:ml-32">
           <div className="relative aspect-square w-full overflow-hidden rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10">
             <Image
               src="/assets/images/hero-de.jpg"

@@ -4,7 +4,7 @@ import React from "react";
 const DataEngineerSchedule = () => {
   return (
     <div className="relative isolate overflow-hidden pb-32">
-      <div className="text-center leading-loose">
+      <div className="px-5 text-center leading-loose">
         <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
           {dataEngineerCopy.scheduleTitle}
         </h2>

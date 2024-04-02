@@ -5,17 +5,29 @@ import React from "react";
 
 const events = [
   {
-    image: "/assets/images/events/podfast2.png",
-    title: "Data Engineering 101 - Fundamentals of Data Pipeline",
-    guestName: "Adam Widi Bagaskarta",
-    guestCompany: "Tech Company",
-    guestJob: "Data Engineer",
+    image: "/assets/images/events/workshop-2.png",
+    title: "Let's Build Your First Data Engineering Portfolio",
+    type: "workshop series 2",
+    facilitatorName: "Rio Dwi Putra Perkasa",
+    facilitatorCompany: "Tech Company",
+    facilitatorJob: "Data Engineer",
     hostName: "Rahadian Rizki",
-    time: "March 28th, 8:30pm",
+    time: "April 6th, 9:00 am",
     youtube: "https://youtube.com/@partnatech",
-    x: "https://x.com/rahadianrizkiii",
-    type: "partnatalks series 2",
+    link: "https://bit.ly/ws2partna",
   },
+  // {
+  //   image: "/assets/images/events/podfast2.png",
+  //   title: "Data Engineering 101 - Fundamentals of Data Pipeline",
+  //   guestName: "Adam Widi Bagaskarta",
+  //   guestCompany: "Tech Company",
+  //   guestJob: "Data Engineer",
+  //   hostName: "Rahadian Rizki",
+  //   time: "March 28th, 8:30pm",
+  //   youtube: "https://youtube.com/@partnatech",
+  //   x: "https://x.com/rahadianrizkiii",
+  //   type: "partnatalks series 2",
+  // },
   // {
   //   image: "/assets/images/events/airflow-dbt-integration.png",
   //   title: "airflow-dbt-integration",
@@ -40,6 +52,9 @@ const events = [
 
 const pastEvents = [
   {
+    image: "/assets/images/events/podfast2.png",
+  },
+  {
     image: "/assets/images/events/podfast1.png",
   },
   {
@@ -63,17 +78,12 @@ export default function Page() {
         />
       </div>
       <div className="mx-auto mt-12 max-w-7xl">
-        <h3 className="text-center text-2xl font-bold md:text-4xl">
-          Our Events and Workshops
-        </h3>
+        <h3 className="text-center text-2xl font-bold md:text-4xl">Our Events and Workshops</h3>
 
         <div
-          className={cn(
-            "scroll-custom flex items-center overflow-x-scroll py-6",
-            {
-              "justify-center": events.length === 1,
-            },
-          )}
+          className={cn("scroll-custom flex items-center overflow-x-scroll py-6", {
+            "justify-center": events.length === 1,
+          })}
         >
           {events.map((event, index) => (
             <div
@@ -96,36 +106,28 @@ export default function Page() {
 
               <div className="flex flex-[2] flex-col justify-between pt-5 md:px-6 md:pt-0">
                 <div className="mb-4">
-                  <p className="text-base font-semibold  text-white md:text-xl">
-                    {event.title}
-                  </p>
-                  <span className="mt-2 inline-flex items-center rounded-md bg-primary-900/10 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
+                  <p className="text-base font-semibold  text-white md:text-xl">{event.title}</p>
+                  <span className="mt-2 inline-flex items-center rounded-md bg-primary-900/20 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
                     {event.type}
                   </span>
                 </div>
                 <div className="my-4 font-semibold text-white md:my-0">
-                  <p>Guest Speaker: </p>
-                  <p>{event.guestName}</p>
+                  <p>Facilitator: </p>
+                  <p>{event.facilitatorName}</p>
                   <p>
-                    {event.guestJob} at {event.guestCompany}
+                    {event.facilitatorJob} at {event.facilitatorCompany} & Mentor at PartnaLearn DE
+                    Bootcamp
                   </p>
                   <p className="mt-3">{event.time}</p>
                 </div>
                 <div className="flex flex-col">
                   <p className="text-white">Live on:</p>
-                  <Link
-                    href={event.youtube}
-                    className="text-primary-300"
-                    target="_blank"
-                  >
-                    {event.youtube.replace("https://", "")}
+                  <Link href={event.youtube} className="text-primary-300" target="_blank">
+                    {event.youtube.replace("https://", "")}{" "}
+                    <span className="text-white">(FREE)</span>
                   </Link>
-                  <Link
-                    href={event.x}
-                    className="text-primary-300"
-                    target="_blank"
-                  >
-                    {event.x.replace("https://", "")}
+                  <Link href={event.link} className="text-primary-300" target="_blank">
+                    {event.link.replace("https://", "")} <span className="text-white">(Paid)</span>
                   </Link>
                 </div>
 
@@ -146,16 +148,11 @@ export default function Page() {
       </div>
 
       <div className="mx-auto mt-8 max-w-7xl">
-        <h3 className="text-center text-2xl font-bold md:text-4xl">
-          Past Events and Workshops
-        </h3>
+        <h3 className="text-center text-2xl font-bold md:text-4xl">Past Events and Workshops</h3>
         <div
-          className={cn(
-            "mx-auto mt-6 grid w-4/5 grid-cols-1 gap-8 lg:grid-cols-3",
-            {
-              "flex items-center justify-center": pastEvents.length === 1,
-            },
-          )}
+          className={cn("mx-auto mt-6 grid w-4/5  grid-cols-1 gap-8 lg:grid-cols-3", {
+            "flex items-center justify-center": pastEvents.length === 1,
+          })}
         >
           {pastEvents.map((pastEvent, index) => (
             <Image
@@ -163,7 +160,7 @@ export default function Page() {
               width={300}
               height={300}
               src={pastEvent.image}
-              className="h-[300px] w-[300px] rounded-md object-cover"
+              className="mx-auto h-[300px] w-[300px] rounded-md object-cover"
               alt={pastEvent.image}
             />
           ))}
