@@ -28,6 +28,7 @@ export default function DataEngineerHero() {
           <h2 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             {dataEngineerCopy.title}
           </h2>
+
           <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerCopy.description}</p>
           <div className="mt-4 flex w-full flex-wrap">
             {dataEngineerCopy.badges.map((badge, index) => (
@@ -66,7 +67,7 @@ export default function DataEngineerHero() {
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-16 lg:max-w-none lg:flex-1 xl:ml-32">
           <div className="relative aspect-square w-full overflow-hidden rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10">
             <Image
-              src="/assets/images/hero-image.jpg"
+              src="/assets/images/hero-de.jpg"
               alt="Hero Image"
               fill
               className="object-cover"
