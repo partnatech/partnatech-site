@@ -6,8 +6,8 @@ import React from "react";
 
 const DataEngineerMentor = () => {
   return (
-    <div className="relative isolate overflow-hidden">
-      <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
+    <div className="relative isolate overflow-hidden pb-32">
+      <h2 className="text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
         {dataEngineerCopy.mentorTitle}
       </h2>
 

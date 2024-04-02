@@ -6,8 +6,8 @@ import React from "react";
 
 const AnalyticsEngineeringMentor = () => {
   return (
-    <div className="relative isolate overflow-hidden">
-      <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
+    <div className="relative isolate overflow-hidden pb-32">
+      <h2 className="text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
         {analyticsEngineeringCopy.mentorTitle}
       </h2>
       <div className="mx-auto mt-10 max-w-7xl px-5 lg:px-8">
