@@ -31,7 +31,7 @@ export const HeroHireTalents = () => {
 
           <div className="mt-10">
             <Link href="" target="_blank">
-              <button className="mt-4 rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+              <button className="mt-4 cursor-not-allowed rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 Become Our Partner
               </button>
             </Link>
