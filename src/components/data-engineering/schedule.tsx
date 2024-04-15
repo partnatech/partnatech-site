@@ -29,8 +29,9 @@ const DataEngineerSchedule = () => {
           ))}
         </div>
         <p className="mt-5">
-          * The classes are held every Sunday and Wednesday from 7:00 PM to 9:30 PM (120-150
-          minutes).
+          * Sesi live class bersama mentor dan instruktur dilakukan setiap hari minggu dan rabu
+          19.00 - 21.30 wib (120-150 menit). Sesi mentoring untuk practice case exercise dilakukan
+          setiap hari jumat.
         </p>
       </div>
     </div>
