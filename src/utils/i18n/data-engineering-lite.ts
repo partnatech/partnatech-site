@@ -64,7 +64,7 @@ export const dataEngineerCopy = {
     },
   ],
 
-  mentorTitle: "Instructor and Mentor",
+  mentorTitle: "Mentors",
   mentors: [
     {
       name: "Adam Widi",
@@ -91,5 +91,5 @@ export const dataEngineerCopy = {
       image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 13 May - 11 August 2024",
+  chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 17 April - 14 Juli 2024",
 };

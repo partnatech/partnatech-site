@@ -28,6 +28,12 @@ module.exports = {
         accent: {
           DEFAULT: "#242427",
         },
+
+        // text colors
+        "primary-content": { DEFAULT: "#2DD4BF" },
+
+        // border colors
+        "secondary-border": "#a3e635",
       },
       animation: {
         scroll:
@@ -49,7 +55,7 @@ module.exports = {
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({

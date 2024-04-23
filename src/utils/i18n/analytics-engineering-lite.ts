@@ -1,4 +1,4 @@
-export const analyticsEngineeringCopy = {
+export const analyticsEngineeringLiteCopy = {
   title: "Analytics Engineering",
   description:
     "Our Analytics Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape. Mixed learning style with some to mention:",
@@ -60,7 +60,7 @@ export const analyticsEngineeringCopy = {
     },
   ],
 
-  mentorTitle: "Instructor and Mentor",
+  mentorTitle: "Mentors",
   mentors: [
     {
       name: "Ahmad Shohibus Sulthoni",
@@ -69,5 +69,5 @@ export const analyticsEngineeringCopy = {
       image: "/assets/images/mentors/fix-instructor-AE-sulthon.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2, 13 May - 11 August 2024",
+  chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2, 17 April - 14 Juli 2024",
 };

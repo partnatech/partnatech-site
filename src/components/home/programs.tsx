@@ -3,12 +3,13 @@ import React from "react";
 import Link from "next/link";
 
 import { homeCopy } from "@/utils/i18n/home";
+import { MegaphoneIcon } from "@heroicons/react/24/solid";
 
-export function BootcampTrack() {
+export function Programs() {
   return (
-    <div>
+    <div className="mx-auto max-w-xs md:px-10 lg:max-w-7xl">
       <h2 className="mb-12 text-center text-3xl font-bold md:text-3xl">Our Programs</h2>
-      <div className="mx-auto grid  max-w-xs grid-cols-1 gap-8 lg:max-w-7xl lg:grid-cols-3 lg:gap-16">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
         {homeCopy.programs.map((program, index) => {
           return (
             <div
@@ -25,9 +26,9 @@ export function BootcampTrack() {
                     <li>{program.duration}</li>
                   </ul>
                 </div>
-                <div className="text-center">
-                  <h3 className="font-semibold">Onboarding Date</h3>
-                  <p className="text-sm">April 17th, 2024</p>
+                <div className="text-center lg:text-2xl">
+                  <h3 className="font-semibold">Price</h3>
+                  <p>Rp. {program.price}</p>
                 </div>
                 <div>
                   <Link href={`/${program.link}`}>
@@ -43,6 +44,19 @@ export function BootcampTrack() {
           );
         })}
       </div>
+
+      <div className="flex justify-start pt-12">
+        <div className="flex">
+          <MegaphoneIcon className="h-7 w-7" />
+          <p>
+            Introducing Our Lite Program. See{" "}
+            <span className="text-primary-content">
+              <Link href="/programs/lite">Here</Link>
+            </span>
+          </p>
+        </div>
+      </div>
+
       <div className="flex justify-center pt-12">
         <Link href="/programs/scholarship">
           <button className="rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500">
