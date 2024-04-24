@@ -1,4 +1,4 @@
-import { dataEngineerCopy } from "@/utils/i18n/data-engineering-lite";
+import { dataEngineerLiteCopy } from "@/utils/i18n/data-engineering-lite";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,12 +8,12 @@ const DataEngineerMentor = () => {
   return (
     <div className="relative isolate overflow-hidden pb-32">
       <h2 className="text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
-        {dataEngineerCopy.mentorTitle}
+        {dataEngineerLiteCopy.mentorTitle}
       </h2>
 
       <div className="mx-auto mt-10 max-w-7xl px-5 lg:px-8">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-10">
-          {dataEngineerCopy.mentors.map((mentor, index) => (
+          {dataEngineerLiteCopy.mentors.map((mentor, index) => (
             <div
               key={`mentor-de-${index}`}
               className="flex items-center rounded-md bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"

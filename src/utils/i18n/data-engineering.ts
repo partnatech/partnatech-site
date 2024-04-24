@@ -67,12 +67,6 @@ export const dataEngineerCopy = {
   mentorTitle: "Instructor and Mentor",
   mentors: [
     {
-      name: "Adam Widi",
-      job: "Data Engineer - OTA Company",
-      linkedin: "https://www.linkedin.com/in/adamwdb/",
-      image: "/assets/images/mentors/fix-mentor-adam.png",
-    },
-    {
       name: " Abel Gideon Silaen",
       job: "Mid Data Engineer - Bank Jasa Jakarta",
       linkedin: "https://www.linkedin.com/in/abelgideonsilaen/",
@@ -89,6 +83,12 @@ export const dataEngineerCopy = {
       job: "Data Engineer - Tech Company",
       linkedin: "https://www.linkedin.com/in/ghalyrizqi/",
       image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
+    },
+    {
+      name: "Adam Widi",
+      job: "Data Engineer - OTA Company",
+      linkedin: "https://www.linkedin.com/in/adamwdb/",
+      image: "/assets/images/mentors/fix-mentor-adam.png",
     },
   ],
   chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 13 May - 11 August 2024",

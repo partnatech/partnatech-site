@@ -21,17 +21,21 @@ export const LiteProgramHero = () => {
       </div>
 
       <div className="mx-auto mt-12 max-w-xs lg:max-w-7xl lg:px-8">
-        <h3 className="text-center text-2xl font-bold md:text-4xl">Introducing Lite Program</h3>
+        <h3 className="text-center text-2xl font-bold md:text-4xl">
+          Introducing <span className="text-secondary">LiteProgram</span>
+        </h3>
 
         <div className="mt-12 space-y-4">
-          <h3 className="text-2xl font-bold">What is LiteProgram ?</h3>
+          <h3 className="text-2xl font-bold">
+            What is <span className="text-secondary">LiteProgram </span>?
+          </h3>
           <p>
-            <span className="font-bold">LiteProgram</span> by partnalearn dirancang untuk individu
-            yang ingin mengembangkan keterampilan mereka secara mandiri, namun tetap mendapatkan
-            dukungan dan bimbingan dari seorang mentor yang berpengalaman untuk mengerjakan practice
-            case. Dalam program ini, peserta akan memiliki akses ke berbagai sumber daya
-            pembelajaran, termasuk materi belajar mandiri, latihan praktik, dan studi kasus untuk
-            dikerjakan.
+            <span className="font-bold text-secondary">LiteProgram</span> by PartnaLearn dirancang
+            untuk individu yang ingin mengembangkan keterampilan mereka secara mandiri, namun tetap
+            mendapatkan dukungan dan bimbingan dari seorang mentor yang berpengalaman untuk
+            mengerjakan practice case. Dalam program ini, peserta akan memiliki akses ke berbagai
+            sumber daya pembelajaran, termasuk materi belajar mandiri, latihan praktik, dan studi
+            kasus untuk dikerjakan.
           </p>
           <p>
             Salah satu fitur utama dari program ini adalah aktivitas mentoring yang disediakan untuk
@@ -48,7 +52,7 @@ export const LiteProgramHero = () => {
           </p>
         </div>
 
-        <div className="my-8 grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-32">
+        <div className="my-8 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-32">
           {liteCopy.benefits.map((benefit, index) => (
             <div key={`lite-benefit-${index}`} className="flex flex-col items-center">
               <div className="h-[70px] lg:h-[90px]">
@@ -66,13 +70,13 @@ export const LiteProgramHero = () => {
           ))}
         </div>
 
-        <p className="text-center text-xl">Program yang tersedia</p>
+        <p className="mt-16 text-center text-xl">Program yang tersedia</p>
         <div className="grid grid-cols-1 gap-8 py-6 lg:grid-cols-2 lg:gap-4">
           {liteCopy.litePrograms.map((program, index) => {
             return (
               <div
                 key={`liteProgram-${index}`}
-                className="mx-auto w-[400px] rounded-md bg-gray-400/10 px-8 py-8 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
+                className="mx-auto w-[320px] rounded-md bg-gray-400/10 px-8 py-8 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 lg:w-[400px]"
               >
                 <div className="flex min-h-[240px] flex-col justify-between space-y-8">
                   <div>
@@ -101,7 +105,12 @@ export const LiteProgramHero = () => {
                   </div>
 
                   <div>
-                    <p className="text-xl">Rp. {program.price}</p>
+                    <div className="flex">
+                      <p className="text-xl text-neutral-500 line-through sm:text-lg">
+                        Rp. {program.price}
+                      </p>
+                      <p className="text-xl">Rp. {program.discountedPrice}</p>
+                    </div>
                     <Link href={`/${program.link}`}>
                       <div className="flex items-center justify-center">
                         <button className="w-full rounded-md bg-primary px-4 py-3 font-semibold  text-white shadow-sm hover:bg-teal-500">
@@ -116,9 +125,27 @@ export const LiteProgramHero = () => {
           })}
         </div>
 
-        <div className="mb-16 mt-8 rounded-md bg-secondary/15 px-4 py-2 text-secondary ring-1 ring-inset ring-secondary/20">
-          <p>Registration Closing Date : May 4th 2024</p>
-          <p>Kick-off : May 5th 2024</p>
+        <div className="mx-24 mb-16 mt-8 rounded-md bg-gray-400/20 px-4 py-2  ring-1 ring-inset ring-gray-400/20">
+          <table>
+            <tr>
+              <td> Registration Closing Date:</td>
+              <td>
+                <p>
+                  : <span className="text-secondary"> May 4th 2024</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td> Kick-off:</td>
+              <td>
+                <p>
+                  : <span className="text-secondary"> May 5th 2024</span>
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <p></p>
         </div>
       </div>
     </div>

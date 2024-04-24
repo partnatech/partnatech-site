@@ -1,4 +1,4 @@
-import { dataEngineerCopy } from "@/utils/i18n/data-engineering-lite";
+import { dataEngineerLiteCopy } from "@/utils/i18n/data-engineering-lite";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,34 +20,47 @@ export default function DataEngineerHero() {
 
       <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center space-y-4 px-6 py-10">
         <div className="inline-flex items-center rounded-full bg-secondary/10 px-6 py-2 text-center text-sm font-semibold text-secondary ring-1 ring-inset ring-secondary/30">
-          {dataEngineerCopy.chip}
+          {dataEngineerLiteCopy.chip}
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:flex lg:px-8">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <h2 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            {dataEngineerCopy.title}
+            {dataEngineerLiteCopy.title}
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerCopy.description}</p>
-          <div className="mt-4 flex w-full flex-wrap">
-            {dataEngineerCopy.badges.map((badge, index) => (
+          <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerLiteCopy.description}</p>
+          <div className="mt-4 flex w-2/3 flex-wrap">
+            {dataEngineerLiteCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}
-                className="mb-2 mr-2 items-center rounded-md bg-primary-900/10 px-2 py-2 text-center text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30"
+                className="mb-2 mr-2 items-center rounded-md bg-primary-900/20 px-2 py-2 text-center text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30"
               >
                 {badge.name}
               </span>
             ))}
           </div>
           <div className="mt-10">
+            <p className="mt-10 text-sm tracking-tight text-neutral-500 line-through sm:text-lg">
+              Rp. 2.000K
+            </p>
             <p className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
               Rp. 1.799K
             </p>
+            <span className="flex items-center">
+              <svg
+                className="mr-4 h-2 w-2 animate-pulse fill-red-500"
+                viewBox="0 0 6 6"
+                aria-hidden="true"
+              >
+                <circle cx={3} cy={3} r={3} />
+              </svg>
+              Early Bird Discount until 01 May 2024
+            </span>
 
             <Link href="" target="_blank">
               <button className="mt-4 cursor-not-allowed rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
-                {dataEngineerCopy.cta}
+                {dataEngineerLiteCopy.cta}
               </button>
             </Link>
           </div>

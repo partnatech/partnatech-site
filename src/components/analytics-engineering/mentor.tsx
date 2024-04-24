@@ -34,7 +34,6 @@ const AnalyticsEngineeringMentor = () => {
               </div>
             </div>
           ))}
-          <div>More to be announced...</div>
         </div>
       </div>
     </div>

@@ -31,20 +31,33 @@ export default function AnalyticsEngineeringHero() {
           <p className="mt-6 text-lg leading-8 text-gray-300">
             {analyticsEngineeringLiteCopy.description}
           </p>
-          <div className="mt-4 flex w-full flex-wrap">
+          <div className="mt-4 flex w-2/3 flex-wrap">
             {analyticsEngineeringLiteCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}
-                className="mb-2 mr-2 items-center rounded-md bg-primary-900/10 px-2 py-2 text-center text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30"
+                className="mb-2 mr-2 items-center rounded-md bg-primary-900/20 px-2 py-2 text-center text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30"
               >
                 {badge.name}
               </span>
             ))}
           </div>
           <div className="mt-10">
-            <h4 className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
+            <p className="mt-10 text-sm tracking-tight text-neutral-500 line-through sm:text-lg">
+              Rp. 1.700K
+            </p>
+            <p className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
               Rp. 1.499K
-            </h4>
+            </p>
+            <span className="flex items-center">
+              <svg
+                className="mr-4 h-2 w-2 animate-pulse fill-red-500"
+                viewBox="0 0 6 6"
+                aria-hidden="true"
+              >
+                <circle cx={3} cy={3} r={3} />
+              </svg>
+              Early Bird Discount until 01 May 2024
+            </span>
             <Link href="" target="_blank">
               <button className="mt-4 cursor-not-allowed rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {analyticsEngineeringLiteCopy.cta}

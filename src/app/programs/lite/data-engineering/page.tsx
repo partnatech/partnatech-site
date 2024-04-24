@@ -1,7 +1,7 @@
 import DataEngineerHero from "@/components/lite/data-engineering/hero";
 import DataEngineerMentor from "@/components/lite/data-engineering/mentor";
 import DataEngineerSchedule from "@/components/lite/data-engineering/schedule";
-import { Faq } from "@/components/shared/faq";
+import { FaqLite } from "@/components/lite/faq";
 
 import React from "react";
 
@@ -11,7 +11,7 @@ const DataEngineerPage = () => {
       <DataEngineerHero />
       <DataEngineerMentor />
       <DataEngineerSchedule />
-      <Faq />
+      <FaqLite />
     </>
   );
 };

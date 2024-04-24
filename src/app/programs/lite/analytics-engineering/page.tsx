@@ -1,7 +1,7 @@
 import AnalyticsEngineeringHero from "@/components/lite/analytics-engineering/hero";
 import AnalyticsEngineeringMentor from "@/components/lite/analytics-engineering/mentor";
 import AnalyticsEngineeringSchedule from "@/components/lite/analytics-engineering/schedule";
-import { Faq } from "@/components/shared/faq";
+import { FaqLite } from "@/components/lite/faq";
 
 import React from "react";
 
@@ -11,7 +11,7 @@ const AnalyticsEngineeringPage = () => {
       <AnalyticsEngineeringHero />
       <AnalyticsEngineeringMentor />
       <AnalyticsEngineeringSchedule />
-      <Faq />
+      <FaqLite />
     </>
   );
 };

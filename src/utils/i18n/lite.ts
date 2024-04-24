@@ -3,13 +3,15 @@ export const liteCopy = {
     {
       name: "Data Engineering",
       duration: "12 weeks",
-      price: "1.799K",
+      price: "2.000K",
+      discountedPrice: "1.799K",
       link: "programs/lite/data-engineering",
     },
     {
       name: "Analytics Engineering",
       duration: "9 weeks",
-      price: "1.499K",
+      price: "1.700K",
+      discountedPrice: "1.499K",
       link: "programs/lite/analytics-engineering",
     },
   ],
@@ -38,13 +40,13 @@ export const liteCopy = {
       item: "Learning Resource",
     },
     {
-      item: "Mentoring 1x /week",
+      item: "Mentoring",
     },
     {
-      item: "Practice Case Exercise /phase",
+      item: "Practice Case Exercise",
     },
     {
-      item: "Lower price",
+      item: "Lower Price",
     },
   ],
 };
