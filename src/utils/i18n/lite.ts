@@ -16,19 +16,19 @@ export const liteCopy = {
 
   benefits: [
     {
-      image: "/assets/images/lite/video_learning.png",
+      image: "/assets/images/lite/video.png",
       text: "Video Learning",
     },
     {
-      image: "/assets/images/lite/live_mentoring_session.png",
+      image: "/assets/images/lite/mentoring.png",
       text: "Live Mentoring Session",
     },
     {
-      image: "/assets/images/lite/free_playground_area.png",
+      image: "/assets/images/lite/playground.png",
       text: "Free Playground Area (GCP Environtment)",
     },
     {
-      image: "/assets/images/lite/final_project.png",
+      image: "/assets/images/lite/project.png",
       text: "Final Project & Portfolio",
     },
   ],
@@ -38,7 +38,7 @@ export const liteCopy = {
       item: "Learning Resource",
     },
     {
-      item: "Mentoring 1 times/week",
+      item: "Mentoring 1x /week",
     },
     {
       item: "Practice Case Exercise /phase",

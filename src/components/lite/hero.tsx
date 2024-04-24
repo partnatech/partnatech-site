@@ -72,7 +72,7 @@ export const LiteProgramHero = () => {
             return (
               <div
                 key={`liteProgram-${index}`}
-                className="mx-auto w-[400px] rounded-md bg-gray-400/10 px-8 py-12 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
+                className="mx-auto w-[400px] rounded-md bg-gray-400/10 px-8 py-8 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
               >
                 <div className="flex min-h-[240px] flex-col justify-between space-y-8">
                   <div>
@@ -116,7 +116,7 @@ export const LiteProgramHero = () => {
           })}
         </div>
 
-        <div className="mb-8">
+        <div className="mb-16 mt-8 rounded-md bg-secondary/15 px-4 py-2 text-secondary ring-1 ring-inset ring-secondary/20">
           <p>Registration Closing Date : May 4th 2024</p>
           <p>Kick-off : May 5th 2024</p>
         </div>

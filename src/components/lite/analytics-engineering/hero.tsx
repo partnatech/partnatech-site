@@ -45,11 +45,11 @@ export default function AnalyticsEngineeringHero() {
             <h4 className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
               Rp. 1.499K
             </h4>
-            {/* <Link href="https://tally.so/r/3y6MY8" target="_blank">
-              <button className="mt-4 rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+            <Link href="" target="_blank">
+              <button className="mt-4 cursor-not-allowed rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {analyticsEngineeringLiteCopy.cta}
               </button>
-            </Link> */}
+            </Link>
           </div>
         </div>
         <div className="mx-auto mt-16 hidden max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-16 lg:flex lg:max-w-none lg:flex-1 xl:ml-32">
