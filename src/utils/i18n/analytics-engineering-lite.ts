@@ -56,7 +56,7 @@ export const analyticsEngineeringLiteCopy = {
     },
     {
       title: "Final Project Phase",
-      category: "Live Class",
+      category: "Live Session",
       items: [
         "Final Project Tutoring I (Business and Data Understanding)",
         "Final Project Tutoring II (Infrastructure and Data Pipeline Building)",
@@ -77,9 +77,9 @@ export const analyticsEngineeringLiteCopy = {
     },
     {
       name: "Rahadian Rizki Prayoga",
-      job: "Senior Data Analyst - Tech Company",
+      job: "Head of Data Analytics - Telco Company",
       linkedin: "https://www.linkedin.com/in/rahadianrizki/",
-      image: "", //change this line
+      image: "/assets/images/mentors/fix-tutor-AE-rahadian.png",
     },
     {
       name: "Ghaly Rizqi Mauludin",

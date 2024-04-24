@@ -58,8 +58,8 @@ export default function AnalyticsEngineeringHero() {
               </svg>
               Early Bird Discount until 01 May 2024
             </span>
-            <Link href="" target="_blank">
-              <button className="mt-4 cursor-not-allowed rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+            <Link href="https://tally.so/r/waBY42" target="_blank">
+              <button className="mt-4 rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                 {analyticsEngineeringLiteCopy.cta}
               </button>
             </Link>

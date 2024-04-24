@@ -22,7 +22,11 @@ const DataEngineerSchedule = () => {
               <p className="text-center text-xl font-semibold text-white">{schedule.title}</p>
 
               <ul className="mt-5 list-inside list-disc">
-                <p>{schedule.category}</p>
+                <p
+                  className={schedule.category === "Live Session" ? "mt-5 text-secondary" : "mt-5"}
+                >
+                  {schedule.category}
+                </p>
                 {schedule.items.map((item, itemIndex) => (
                   <li key={`schedule-${index}-item-${itemIndex}`}>{item}</li>
                 ))}

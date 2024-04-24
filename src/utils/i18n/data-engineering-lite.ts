@@ -66,7 +66,7 @@ export const dataEngineerLiteCopy = {
     },
     {
       title: "Final Project Phase",
-      category: "Live Class",
+      category: "Live Session",
       items: [
         "Final Project Kick-off",
         "Final Project Guidance and Tutoring I, II, III",

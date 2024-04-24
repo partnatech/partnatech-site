@@ -16,7 +16,9 @@ const AnalyticsEngineeringSchedule = () => {
               className="rounded-md bg-gray-400/10 px-8 py-12 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
             >
               <p className="text-center text-xl font-semibold text-white">{schedule.title}</p>
-              <p className="mt-5">{schedule.category} </p>
+              <p className={schedule.category === "Live Session" ? "mt-5 text-secondary" : "mt-5"}>
+                {schedule.category}{" "}
+              </p>
               <ul className="list-inside list-disc">
                 {schedule.items.map((item, itemIndex) => (
                   <li key={`schedule-${index}-item-${itemIndex}`}>{item}</li>
