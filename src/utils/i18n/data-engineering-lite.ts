@@ -91,5 +91,5 @@ export const dataEngineerCopy = {
       image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 17 April - 14 Juli 2024",
+  chip: "Currently Open: PartnaLearn DE Lite Program Beta 2, 24 April - 04 May 2024",
 };

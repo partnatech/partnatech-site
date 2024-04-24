@@ -42,7 +42,7 @@ export default function DataEngineerHero() {
           </div>
           <div className="mt-10">
             <p className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
-              Price: Rp. 1.799K
+              Rp. 1.799K
             </p>
 
             {/* <Link href="https://tally.so/r/mYQPaN" target="_blank">

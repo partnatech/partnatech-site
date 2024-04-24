@@ -69,5 +69,5 @@ export const analyticsEngineeringLiteCopy = {
       image: "/assets/images/mentors/fix-instructor-AE-sulthon.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2, 17 April - 14 Juli 2024",
+  chip: "Currently Open: PartnaLearn AE Lite Program Beta 2, 24 April - 4 May 2024",
 };

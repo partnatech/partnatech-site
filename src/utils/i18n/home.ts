@@ -29,6 +29,18 @@ export const homeCopy = {
     // },
   ],
 
+  benefits: [
+    {
+      item: "Live Class 2 times/week",
+    },
+    {
+      item: "Mentoring 1 times/week",
+    },
+    {
+      item: "Practice Case Exercise/phase",
+    },
+  ],
+
   testimonials: [
     {
       image: "/assets/images/testimonials/fix-testimonials-albiyan-abdika.png",

@@ -43,7 +43,7 @@ export default function AnalyticsEngineeringHero() {
           </div>
           <div className="mt-10">
             <h4 className="mb-4 text-2xl font-bold tracking-tight text-secondary sm:text-3xl">
-              Price: 1.499K
+              Rp. 1.499K
             </h4>
             {/* <Link href="https://tally.so/r/3y6MY8" target="_blank">
               <button className="mt-4 rounded-md bg-primary px-4 py-3 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">

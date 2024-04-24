@@ -1,4 +1,5 @@
 import { liteCopy } from "@/utils/i18n/lite";
+import { CheckCircle2, XCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -22,48 +23,7 @@ export const LiteProgramHero = () => {
       <div className="mx-auto mt-12 max-w-xs lg:max-w-7xl lg:px-8">
         <h3 className="text-center text-2xl font-bold md:text-4xl">Introducing Lite Program</h3>
 
-        <div className="grid grid-cols-1 gap-8 py-6 lg:grid-cols-2 lg:gap-16">
-          {liteCopy.litePrograms.map((program, index) => {
-            return (
-              <div
-                key={`liteProgram-${index}`}
-                className="rounded-md bg-gray-400/10 px-8 py-12 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
-              >
-                <div className="flex min-h-[240px] flex-col justify-between space-y-8">
-                  <div>
-                    <h2 className="mb-2 mt-4 text-center text-base font-semibold text-secondary dark:text-neutral-200 lg:text-2xl">
-                      {program.name}
-                    </h2>
-                    {/* <ul className="flex list-inside list-disc justify-center gap-3 text-sm text-gray-400">
-                      <li>Live Class</li>
-                      <li>{program.duration}</li>
-                    </ul> */}
-                  </div>
-                  <div className="text-center lg:text-2xl">
-                    <h3 className="font-semibold">Price</h3>
-                    <p>Rp. {program.price}</p>
-                  </div>
-                  <div>
-                    <Link href={`/${program.link}`}>
-                      <div className="flex items-center justify-center">
-                        <button className="w-full rounded-md bg-primary px-4 py-3 font-semibold  text-white shadow-sm hover:bg-teal-500">
-                          See Details
-                        </button>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mb-8 rounded bg-gray-400/10 px-8 py-4 ring-1 ring-inset ring-gray-400/20">
-          <p>Registration Closing Date : May 4th 2024</p>
-          <p>Kick-off : May 5th 2024</p>
-        </div>
-
-        <div className="space-y-4">
+        <div className="mt-12 space-y-4">
           <h3 className="text-2xl font-bold">What is LiteProgram ?</h3>
           <p>
             <span className="font-bold">LiteProgram</span> by partnalearn dirancang untuk individu
@@ -104,6 +64,61 @@ export const LiteProgramHero = () => {
               <p className="text-center">{benefit.text}</p>
             </div>
           ))}
+        </div>
+
+        <p className="text-center text-xl">Program yang tersedia</p>
+        <div className="grid grid-cols-1 gap-8 py-6 lg:grid-cols-2 lg:gap-4">
+          {liteCopy.litePrograms.map((program, index) => {
+            return (
+              <div
+                key={`liteProgram-${index}`}
+                className="mx-auto w-[400px] rounded-md bg-gray-400/10 px-8 py-12 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
+              >
+                <div className="flex min-h-[240px] flex-col justify-between space-y-8">
+                  <div>
+                    <h2 className="mb-2 mt-4 text-center text-base font-semibold text-secondary dark:text-neutral-200 lg:text-2xl">
+                      {program.name}
+                    </h2>
+                    <ul className="flex list-inside list-disc justify-center gap-3 text-sm text-gray-400">
+                      <li>Self Learning+Mentoring</li>
+                      <li>{program.duration}</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    {liteCopy.benefitsCard.map((benefit, index) => {
+                      return (
+                        <div className="flex items-center gap-2" key={`benefit-program-${index}`}>
+                          <CheckCircle2 size={16} color="green" />
+                          <p className="font-base text-sm">{benefit.item}</p>
+                        </div>
+                      );
+                    })}
+                    <div className="flex items-center gap-2">
+                      <XCircle size={16} color="red" />
+                      <p className="font-base text-sm">Live Class</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-xl">Rp. {program.price}</p>
+                    <Link href={`/${program.link}`}>
+                      <div className="flex items-center justify-center">
+                        <button className="w-full rounded-md bg-primary px-4 py-3 font-semibold  text-white shadow-sm hover:bg-teal-500">
+                          See Details
+                        </button>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mb-8">
+          <p>Registration Closing Date : May 4th 2024</p>
+          <p>Kick-off : May 5th 2024</p>
         </div>
       </div>
     </div>

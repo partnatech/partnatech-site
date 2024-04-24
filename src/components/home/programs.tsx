@@ -4,19 +4,20 @@ import Link from "next/link";
 
 import { homeCopy } from "@/utils/i18n/home";
 import { MegaphoneIcon } from "@heroicons/react/24/solid";
+import { CheckCircle2 } from "lucide-react";
 
 export function Programs() {
   return (
     <div className="mx-auto max-w-xs md:px-10 lg:max-w-7xl">
       <h2 className="mb-12 text-center text-3xl font-bold md:text-3xl">Our Programs</h2>
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-4">
         {homeCopy.programs.map((program, index) => {
           return (
             <div
               key={`program-${index}`}
-              className="rounded-md bg-gray-400/10 px-8 py-12 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
+              className="mx-auto w-[400px] rounded-md bg-gray-400/10 px-8 py-12 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20"
             >
-              <div className="flex min-h-[240px] flex-col justify-between space-y-8">
+              <div className="flex min-h-[240px] flex-col justify-between space-y-4">
                 <div>
                   <h2 className="mb-2 mt-4 text-center text-base font-semibold text-secondary dark:text-neutral-200 lg:text-2xl">
                     {program.name}
@@ -26,9 +27,15 @@ export function Programs() {
                     <li>{program.duration}</li>
                   </ul>
                 </div>
-                <div className="text-center lg:text-2xl">
-                  <h3 className="font-semibold">Price</h3>
-                  <p>Rp. {program.price}</p>
+                <div>
+                  {homeCopy.benefits.map((benefit, index) => {
+                    return (
+                      <div className="flex items-center gap-2" key={`benefit-program-${index}`}>
+                        <CheckCircle2 size={16} />
+                        <p className="font-base text-sm">{benefit.item}</p>
+                      </div>
+                    );
+                  })}
                 </div>
                 <div>
                   <Link href={`/${program.link}`}>
