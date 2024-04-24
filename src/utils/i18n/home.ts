@@ -10,6 +10,7 @@ export const homeCopy = {
         "Data Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape.",
       link: "programs/data-engineering",
       duration: "12 weeks",
+      price: "5.000K",
     },
     {
       name: "Analytics Engineering",
@@ -17,13 +18,26 @@ export const homeCopy = {
         "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
       link: "programs/analytics-engineering",
       duration: "9 weeks",
+      price: "4.200K",
+    },
+    // {
+    //   name: "Data Analytics",
+    //   description:
+    //     "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
+    //   link: "programs/data-analytics",
+    //   duration: "8 weeks",
+    // },
+  ],
+
+  benefits: [
+    {
+      item: "Live Class 2 times/week",
     },
     {
-      name: "Data Analytics",
-      description:
-        "Analytics Engineer Program is an awesome intersection between a Data Analyst and Data Engineer.",
-      link: "programs/data-analytics",
-      duration: "8 weeks",
+      item: "Mentoring 1 times/week",
+    },
+    {
+      item: "Practice Case Exercise/phase",
     },
   ],
 

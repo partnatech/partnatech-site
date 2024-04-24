@@ -16,6 +16,7 @@ const navigation = {
     { name: "Data Analytics", href: "/programs/data-analytics" },
     { name: "Data Engineering", href: "/programs/data-engineering" },
     { name: "Scholarship", href: "/programs/scholarship" },
+    { name: "Lite Programs", href: "/programs/lite" },
   ],
   legal: [
     { name: "Claim", href: "/" },

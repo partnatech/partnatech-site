@@ -1,12 +1,9 @@
-export const analyticsEngineeringCopy = {
+export const analyticsEngineeringLiteCopy = {
   title: "Analytics Engineering",
   description:
     "Our Analytics Engineering Program is meticulously designed to transform beginners into skilled professionals ready to tackle the challenges of the modern data landscape. Mixed learning style with some to mention:",
   cta: "Register Here",
   badges: [
-    {
-      name: "Tutor-led Session",
-    },
     {
       name: "Industry-level Practical Case and Exercise",
     },
@@ -22,6 +19,7 @@ export const analyticsEngineeringCopy = {
   schedules: [
     {
       title: "Fundamental and Engineering Phase",
+      category: "Self Learning",
       items: [
         "Introduction and Getting Started to Data Science and Analytics Engineering",
         "Database I : RDBMS and Table Structure",
@@ -30,26 +28,35 @@ export const analyticsEngineeringCopy = {
         "Python I : Python Basics, Data Structure and Data Types",
         "Python II : Python for Data Engineering and Utilities",
       ],
+      mentoringTitle: "Mentoring",
+      mentoring: ["Mentoring I: Database", "Mentoring II: Python"],
     },
     {
       title: "Analytical Phase",
+      category: "Self Learning",
       items: [
         "Python for Data Analysis : Data Wrangling I",
         "Data Visualization : Theory and Practice with Python",
         "Applied Statistics I : Descriptive Statistics",
         "Applied Statistics II : Inferential Statistics",
       ],
+      mentoringTitle: "Mentoring",
+      mentoring: ["Mentoring I: Database", "Mentoring II: Python"],
     },
     {
       title: "Specialization Phase",
+      category: "Self Learning",
       items: [
         "Building Data Products of Analytics Engineering I (Airflow, dbt)",
         "Building Data Products of Analytics Engineering II (Airflow, dbt)",
         "Building Data Products of Analytics Engineering III (Looker Studio)",
       ],
+      mentoringTitle: "Mentoring",
+      mentoring: ["Mentoring III: Building Data Products"],
     },
     {
       title: "Final Project Phase",
+      category: "Live Session",
       items: [
         "Final Project Tutoring I (Business and Data Understanding)",
         "Final Project Tutoring II (Infrastructure and Data Pipeline Building)",
@@ -60,7 +67,7 @@ export const analyticsEngineeringCopy = {
     },
   ],
 
-  mentorTitle: "Instructor and Mentor",
+  mentorTitle: "Mentors",
   mentors: [
     {
       name: "Ahmad Shohibus Sulthoni",
@@ -68,6 +75,18 @@ export const analyticsEngineeringCopy = {
       linkedin: "https://www.linkedin.com/in/as-sulthoni/",
       image: "/assets/images/mentors/fix-instructor-AE-sulthon.png",
     },
+    {
+      name: "Rahadian Rizki Prayoga",
+      job: "Head of Data Analytics - Telco Company",
+      linkedin: "https://www.linkedin.com/in/rahadianrizki/",
+      image: "/assets/images/mentors/fix-tutor-AE-rahadian.png",
+    },
+    {
+      name: "Ghaly Rizqi Mauludin",
+      job: "Data Engineer - Tech Company",
+      linkedin: "https://www.linkedin.com/in/ghalyrizqi/",
+      image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
+    },
   ],
-  chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2, 13 May - 11 August 2024",
+  chip: "Currently Open: PartnaLearn AE LiteProgram 1 Registration until 4 May 2024",
 };

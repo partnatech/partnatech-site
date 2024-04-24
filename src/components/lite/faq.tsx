@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { faqCopy } from "@/utils/i18n/faq";
+import { faqLiteCopy } from "@/utils/i18n/faq-lite";
 import { Disclosure } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export const Faq = () => {
+export const FaqLite = () => {
   return (
     <div>
       <div className="mx-auto max-w-7xl px-8">
@@ -33,7 +33,7 @@ export const Faq = () => {
             Frequently asked questions
           </h2>
           <dl className="mt-10 space-y-6 divide-y divide-white/10">
-            {faqCopy.map((faq) => (
+            {faqLiteCopy.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
                   <>
