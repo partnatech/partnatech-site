@@ -31,13 +31,13 @@ export const homeCopy = {
 
   benefits: [
     {
-      item: "Live Class 2 times/week",
+      item: "Live Class",
     },
     {
-      item: "Mentoring 1 times/week",
+      item: "Mentoring",
     },
     {
-      item: "Practice Case Exercise/phase",
+      item: "Practice Case Exercise",
     },
   ],
 

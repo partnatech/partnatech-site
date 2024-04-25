@@ -53,9 +53,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div
-      className={`min-w-screen sticky top-0 z-20 backdrop-blur-lg backdrop-filter`}
-    >
+    <div className={`min-w-screen sticky top-0 z-20 backdrop-blur-lg backdrop-filter`}>
       <div className="container mx-auto grid max-w-7xl grid-cols-2 items-center px-4 py-6 lg:grid-cols-3">
         <Logo />
         <NavigationMenu className="hidden lg:flex">
@@ -66,7 +64,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`
                   ${
-                    pathname === link.href
+                    pathname.includes(link.href)
                       ? cn(navigationMenuTriggerStyle(), "opacity-100")
                       : navigationMenuTriggerStyle()
                   }
@@ -90,13 +88,7 @@ function Logo() {
   return (
     <Link href="/">
       <div className="flex items-center gap-2 text-2xl font-black transition-colors duration-300 ease-linear">
-        <Image
-          className="h-7"
-          src="/partnatech_1.png"
-          alt="partnatech"
-          width={30}
-          height={120}
-        />
+        <Image className="h-7" src="/partnatech_1.png" alt="partnatech" width={30} height={120} />
         <p>partnatech</p>
       </div>
     </Link>

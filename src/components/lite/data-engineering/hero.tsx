@@ -30,7 +30,7 @@ export default function DataEngineerHero() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-gray-300">{dataEngineerLiteCopy.description}</p>
-          <div className="mt-4 flex w-2/3 flex-wrap">
+          <div className="mt-4 flex w-full flex-wrap lg:w-2/3">
             {dataEngineerLiteCopy.badges.map((badge, index) => (
               <span
                 key={`badge-${index}`}

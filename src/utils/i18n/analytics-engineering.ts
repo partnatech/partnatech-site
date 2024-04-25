@@ -68,6 +68,18 @@ export const analyticsEngineeringCopy = {
       linkedin: "https://www.linkedin.com/in/as-sulthoni/",
       image: "/assets/images/mentors/fix-instructor-AE-sulthon.png",
     },
+    {
+      name: "Rahadian Rizki Prayoga",
+      job: "Head of Data Analytics - Telco Company",
+      linkedin: "https://www.linkedin.com/in/rahadianrizki/",
+      image: "/assets/images/mentors/fix-tutor-AE-rahadian.png",
+    },
+    {
+      name: "Ghaly Rizqi Mauludin",
+      job: "Data Engineer - Tech Company",
+      linkedin: "https://www.linkedin.com/in/ghalyrizqi/",
+      image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
+    },
   ],
   chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2, 13 May - 11 August 2024",
 };
