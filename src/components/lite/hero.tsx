@@ -20,7 +20,7 @@ export const LiteProgramHero = () => {
         />
       </div>
 
-      <div className="mx-auto mt-12 max-w-xs lg:max-w-7xl lg:px-8">
+      <div className="mx-auto mt-12 px-6 lg:max-w-7xl lg:px-8">
         <h3 className="text-center text-2xl font-bold md:text-4xl">
           Introducing <span className="text-secondary">LiteProgram</span>
         </h3>
@@ -125,27 +125,25 @@ export const LiteProgramHero = () => {
           })}
         </div>
 
-        <div className="mx-24 mb-16 mt-8 rounded-md bg-gray-400/20 px-4 py-2  ring-1 ring-inset ring-gray-400/20">
-          <table>
-            <tr>
-              <td> Registration Closing Date:</td>
-              <td>
+        <div className="mx-4 mb-16 mt-8 rounded-md bg-gray-400/20 px-4 py-2  ring-1 ring-inset ring-gray-400/20 lg:mx-24">
+          <div className="flex flex-col">
+            <div className="mb-4 flex flex-row">
+              <div className="w-1/2 lg:w-1/4">Registration Closing Date</div>
+              <div className="w-1/2">
                 <p>
-                  : <span className="text-secondary"> May 4th 2024</span>
+                  : <span className="text-secondary">May 4th 2024</span>
                 </p>
-              </td>
-            </tr>
-            <tr>
-              <td> Kick-off:</td>
-              <td>
+              </div>
+            </div>
+            <div className="flex flex-row">
+              <div className="w-1/2 lg:w-1/4">Kick-off:</div>
+              <div className="w-1/2">
                 <p>
-                  : <span className="text-secondary"> May 5th 2024</span>
+                  : <span className="text-secondary">May 5th 2024</span>
                 </p>
-              </td>
-            </tr>
-          </table>
-
-          <p></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
