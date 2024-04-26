@@ -34,6 +34,9 @@ export const homeCopy = {
       item: "Live Class",
     },
     {
+      item: "Learning Resource",
+    },
+    {
       item: "Mentoring",
     },
     {

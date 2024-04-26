@@ -52,13 +52,15 @@ export function Programs() {
         })}
       </div>
 
-      <div className="flex justify-start pt-12">
+      <div className="mt-12 flex justify-start rounded-md bg-gray-400/20 px-4 py-2 ring-1 ring-inset ring-gray-400/20 lg:mx-24">
         <div className="flex">
           <MegaphoneIcon className="h-7 w-7" />
           <p>
-            Introducing Our Lite Program. See{" "}
-            <span className="text-primary-content">
-              <Link href="/programs/lite">Here</Link>
+            Introducing Our <span className="text-secondary">LiteProgram</span>. See{" "}
+            <span>
+              <Link href="/programs/lite" className="hover:underline">
+                Here
+              </Link>
             </span>
           </p>
         </div>

@@ -1,5 +1,6 @@
 "use client";
-
+import * as React from "react";
+import { Fragment, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -10,7 +11,9 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/utils/cn";
@@ -20,6 +23,7 @@ import Image from "next/image";
 interface NavLink {
   label: string;
   href: string;
+  submenu?: NavLink[];
 }
 
 const links: NavLink[] = [
@@ -30,6 +34,16 @@ const links: NavLink[] = [
   {
     label: "Programs",
     href: "/programs",
+    submenu: [
+      {
+        label: "Full Program",
+        href: "/programs",
+      },
+      {
+        label: "Lite Program",
+        href: "/programs/lite",
+      },
+    ],
   },
   {
     label: "Learn",
@@ -60,18 +74,22 @@ export default function Navbar() {
           <NavigationMenuList>
             {links.map((link, idx) => (
               <NavigationMenuItem key={idx}>
-                <NavigationMenuLink
-                  href={link.href}
-                  className={`
-                  ${
-                    pathname.includes(link.href)
-                      ? cn(navigationMenuTriggerStyle(), "opacity-100")
-                      : navigationMenuTriggerStyle()
-                  }
-                `}
-                >
-                  {link.label}
-                </NavigationMenuLink>
+                {link.submenu ? (
+                  <DropdownMenu label={link.label} submenu={link.submenu} />
+                ) : (
+                  <NavigationMenuLink
+                    href={link.href}
+                    className={`
+                      ${
+                        pathname.includes(link.href)
+                          ? cn(navigationMenuTriggerStyle(), "opacity-100")
+                          : navigationMenuTriggerStyle()
+                      }
+                    `}
+                  >
+                    {link.label}
+                  </NavigationMenuLink>
+                )}
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
@@ -96,7 +114,6 @@ function Logo() {
 }
 
 function MobileNav() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
@@ -125,3 +142,48 @@ function MobileNav() {
     </Sheet>
   );
 }
+
+interface DropdownMenuProps {
+  label: string;
+  submenu: NavLink[];
+}
+
+function DropdownMenu({ label, submenu }: DropdownMenuProps) {
+  return (
+    <NavigationMenu>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger>{label}</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <ul className="md:grid-cols-1lg:w-[600px] grid w-[400px] gap-3 bg-black p-4 md:w-[500px] ">
+            {submenu.map((item) => (
+              <ListItem key={item.label} title={item.label} href={item.href} />
+            ))}
+          </ul>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+    </NavigationMenu>
+  );
+}
+
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
+  ({ className, title, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              "hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent focus:bg-accent",
+              className,
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">{children}</p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  },
+);
+ListItem.displayName = "ListItem";
