@@ -131,7 +131,7 @@ export const LiteProgramHero = () => {
               <div className="w-1/2 lg:w-1/4">Registration Closing Date</div>
               <div className="w-1/2">
                 <p>
-                  : <span className="text-secondary">May 4th 2024</span>
+                  : <span className="text-secondary">May 9th 2024</span>
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export const LiteProgramHero = () => {
               <div className="w-1/2 lg:w-1/4">Kick-off:</div>
               <div className="w-1/2">
                 <p>
-                  : <span className="text-secondary">May 5th 2024</span>
+                  : <span className="text-secondary">May 10th 2024</span>
                 </p>
               </div>
             </div>
