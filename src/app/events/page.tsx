@@ -1,68 +1,36 @@
-import { cn } from "@/utils/cn";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const events = [
-  {
-    image: "/assets/images/events/workshop-2.png",
-    title: "Let's Build Your First Data Engineering Portfolio",
-    type: "workshop series 2",
-    facilitatorName: "Rio Dwi Putra Perkasa",
-    facilitatorCompany: "Tech Company",
-    facilitatorJob: "Data Engineer",
-    hostName: "Rahadian Rizki",
-    time: "April 6th, 9:00 am",
-    youtube: "https://youtube.com/@partnatech",
-    link: "https://bit.ly/ws2partna",
-  },
-  // {
-  //   image: "/assets/images/events/podfast2.png",
-  //   title: "Data Engineering 101 - Fundamentals of Data Pipeline",
-  //   guestName: "Adam Widi Bagaskarta",
-  //   guestCompany: "Tech Company",
-  //   guestJob: "Data Engineer",
-  //   hostName: "Rahadian Rizki",
-  //   time: "March 28th, 8:30pm",
-  //   youtube: "https://youtube.com/@partnatech",
-  //   x: "https://x.com/rahadianrizkiii",
-  //   type: "partnatalks series 2",
-  // },
-  // {
-  //   image: "/assets/images/events/airflow-dbt-integration.png",
-  //   title: "airflow-dbt-integration",
-  //   mentorName: "Ahmad Shohibus Sulthoni",
-  //   mentorCompany: "Tech Company",
-  //   mentorJob: "Senior Data Analyst",
-  //   time: "March 12th - 14th, 8:30pm",
-  //   link: "https://bit.ly/ws1-partnalearn",
-  //   type: "workshop series 1",
-  //   breakdown: [
-  //     {
-  //       title: "airflow-dbt-integration",
-  //       items: [
-  //         "Day 1: Getting Started with Airflow",
-  //         "Day 2: Data Build Tool (dbt) Introduction",
-  //         "Day 3 : Orchestrate your transformation workflow with Airflow",
-  //       ],
-  //     },
-  //   ],
-  // },
-];
+import qs from "qs";
 
-const pastEvents = [
-  {
-    image: "/assets/images/events/podfast2.png",
-  },
-  {
-    image: "/assets/images/events/podfast1.png",
-  },
-  {
-    image: "/assets/images/events/airflow-dbt-integration.png",
-  },
-];
+import { cn } from "@/utils/cn";
+import { StrapiResponse } from "@/types/strapi";
+import { EventResponse } from "@/types/strapi/event";
+import { API_URL } from "@/config/api-url";
 
-export default function Page() {
+async function getPastEvents() {
+  const query = qs.stringify({
+    populate: "*",
+  });
+
+  const res = await fetch(`${API_URL}/api/events?${query}`, {
+    cache: "no-store",
+  });
+  const strapiResponse: StrapiResponse<EventResponse[]> = await res.json();
+  return strapiResponse;
+}
+
+export default async function Page() {
+  const strapiResponse = await getPastEvents();
+  const listEvents = strapiResponse.data;
+
+  const upcomingEvents = listEvents.filter((item) => item.attributes.isPast === false);
+
+  const pastEvents = listEvents.filter((item) => item.attributes.isPast === true);
+
+  console.log(listEvents);
+
   return (
     <div className="relative isolate min-h-screen overflow-hidden">
       <div
@@ -82,65 +50,59 @@ export default function Page() {
 
         <div
           className={cn("scroll-custom flex items-center overflow-x-scroll py-6", {
-            "justify-center": events.length === 1,
+            "justify-center": upcomingEvents.length === 1,
           })}
         >
-          {events.map((event, index) => (
+          {upcomingEvents.map((item, index) => (
             <div
               key={`event-${index}`}
               className={cn(
                 "flex w-[90%] shrink-0 flex-col rounded-lg bg-gray-400/10 p-4 font-medium text-gray-300 ring-1 ring-inset ring-gray-400/20 md:w-4/5 md:flex-row md:p-8",
                 {
-                  "mr-4": events.length > 1,
+                  "mr-4": upcomingEvents.length > 1,
                 },
               )}
             >
               <picture className="relative aspect-square flex-1">
                 <Image
                   fill
-                  src={event.image}
+                  src={`${API_URL}${item.attributes.flyer.data.attributes.url}`}
                   className="rounded-md object-cover"
-                  alt={event.title}
+                  alt=""
                 />
               </picture>
 
               <div className="flex flex-[2] flex-col justify-between pt-5 md:px-6 md:pt-0">
                 <div className="mb-4">
-                  <p className="text-base font-semibold  text-white md:text-xl">{event.title}</p>
+                  <p className="text-base font-semibold  text-white md:text-xl">
+                    {item.attributes.title}
+                  </p>
                   <span className="mt-2 inline-flex items-center rounded-md bg-primary-900/20 px-2 py-1 text-sm font-medium text-primary-300 ring-1 ring-inset ring-primary-700/30">
-                    {event.type}
+                    {item.attributes.type}
                   </span>
                 </div>
                 <div className="my-4 font-semibold text-white md:my-0">
                   <p>Facilitator: </p>
-                  <p>{event.facilitatorName}</p>
+                  <p>{item.attributes.facilitatorName}</p>
                   <p>
-                    {event.facilitatorJob} at {event.facilitatorCompany} & Mentor at PartnaLearn DE
-                    Bootcamp
+                    {item.attributes.facilitatorJob} at {item.attributes.facilitatorCompany} &
+                    Mentor at PartnaLearn DE Bootcamp
                   </p>
-                  <p className="mt-3">{event.time}</p>
+                  <p className="mt-3">{item.attributes.time}</p>
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-white">Live on:</p>
-                  <Link href={event.youtube} className="text-primary-300" target="_blank">
-                    {event.youtube.replace("https://", "")}{" "}
-                    <span className="text-white">(FREE)</span>
+                  <p className="text-white">Link:</p>
+                  <Link href={item.attributes.link1} className="text-primary-300" target="_blank">
+                    {item.attributes.link1.replace("https://", "")}
                   </Link>
-                  <Link href={event.link} className="text-primary-300" target="_blank">
-                    {event.link.replace("https://", "")} <span className="text-white">(Paid)</span>
+                  <Link
+                    href={item.attributes.link2 || "#"}
+                    className="text-primary-300"
+                    target="_blank"
+                  >
+                    {item.attributes.link2?.replace("https://", "")}
                   </Link>
                 </div>
-
-                {/* {event.breakdown?.map((breakdown, iBreakdown) => (
-                  <div key={`event-${index}-breakdown-${iBreakdown}`}>
-                    <p className="text-white">{breakdown.title}</p>
-                    <ul>
-                      {breakdown.items.map((item, iItem) => (
-                        <li key={`event-${index}-breakdown-${iBreakdown}-item-${iItem}`}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))} */}
               </div>
             </div>
           ))}
@@ -159,9 +121,9 @@ export default function Page() {
               key={`past-event-${index}`}
               width={300}
               height={300}
-              src={pastEvent.image}
+              src={`${API_URL}${pastEvent.attributes.flyer.data.attributes.url}`}
               className="mx-auto h-[300px] w-[300px] rounded-md object-cover"
-              alt={pastEvent.image}
+              alt=""
             />
           ))}
         </div>

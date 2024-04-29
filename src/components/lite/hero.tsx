@@ -125,7 +125,7 @@ export const LiteProgramHero = () => {
           })}
         </div>
 
-        <div className="mx-4 mb-16 mt-8 rounded-md bg-gray-400/20 px-4 py-2  ring-1 ring-inset ring-gray-400/20 lg:mx-24">
+        <div className="bg-secondary-base/10 mx-4 mb-16 mt-8 rounded-md px-4 py-2  ring-1 ring-inset ring-gray-400/20 lg:mx-24">
           <div className="flex flex-col">
             <div className="mb-4 flex flex-row">
               <div className="w-1/2 lg:w-1/4">Registration Closing Date</div>

@@ -154,7 +154,7 @@ function DropdownMenu({ label, submenu }: DropdownMenuProps) {
       <NavigationMenuItem>
         <NavigationMenuTrigger>{label}</NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="md:grid-cols-1lg:w-[600px] grid w-[400px] gap-3 bg-black p-4 md:w-[500px] ">
+          <ul className="grid w-[400px] gap-3 bg-black p-4 md:w-[500px] md:grid-cols-1 lg:w-[200px] ">
             {submenu.map((item) => (
               <ListItem key={item.label} title={item.label} href={item.href} />
             ))}
