@@ -29,8 +29,6 @@ export default async function Page() {
 
   const pastEvents = listEvents.filter((item) => item.attributes.isPast === true);
 
-  console.log(listEvents);
-
   return (
     <div className="relative isolate min-h-screen overflow-hidden">
       <div
@@ -85,8 +83,7 @@ export default async function Page() {
                   <p>Facilitator: </p>
                   <p>{item.attributes.facilitatorName}</p>
                   <p>
-                    {item.attributes.facilitatorJob} at {item.attributes.facilitatorCompany} &
-                    Mentor at PartnaLearn DE Bootcamp
+                    {item.attributes.facilitatorJob} at {item.attributes.facilitatorCompany}
                   </p>
                   <p className="mt-3">{item.attributes.time}</p>
                 </div>
