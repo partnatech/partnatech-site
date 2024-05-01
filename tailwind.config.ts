@@ -29,6 +29,9 @@ module.exports = {
           DEFAULT: "#242427",
         },
 
+        // background colors
+        "secondary-base": "#9ca3af",
+
         // text colors
         "primary-content": { DEFAULT: "#2DD4BF" },
 
