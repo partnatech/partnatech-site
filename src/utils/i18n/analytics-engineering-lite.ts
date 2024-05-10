@@ -88,5 +88,5 @@ export const analyticsEngineeringLiteCopy = {
       image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn AE LiteProgram 1 Registration until 4 May 2024",
+  chip: "Currently Open: PartnaLearn AE LiteProgram 1 Registration until 17 May 2024",
 };

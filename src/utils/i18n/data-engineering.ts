@@ -91,5 +91,7 @@ export const dataEngineerCopy = {
       image: "/assets/images/mentors/fix-mentor-adam.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2, 13 May - 11 August 2024",
+  chip: "Currently Open: PartnaLearn DE Bootcamp Beta 2 Registration until 18 May 2024",
+  registrationDate: "May 18th 2024",
+  kickOffDate: "May 19th 2024",
 };

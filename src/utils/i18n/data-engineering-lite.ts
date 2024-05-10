@@ -103,5 +103,5 @@ export const dataEngineerLiteCopy = {
       image: "/assets/images/mentors/fix-mentor-adam.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn DE LiteProgram 1 Registration until 04 May 2024",
+  chip: "Currently Open: PartnaLearn DE LiteProgram 1 Registration until 17 May 2024",
 };
