@@ -28,7 +28,29 @@ const DataEngineerSchedule = () => {
             </div>
           ))}
         </div>
-        <p className="mt-5">
+
+        <div className="mt-8 rounded-md bg-secondary-base/10 px-4 py-2  ring-1 ring-inset ring-gray-400/20">
+          <div className="flex flex-col">
+            <div className="mb-4 flex flex-row">
+              <div className="w-1/2 lg:w-1/4">Registration Closing Date</div>
+              <div className="w-1/2">
+                <p>
+                  : <span className="text-secondary">{dataEngineerCopy.registrationDate}</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row">
+              <div className="w-1/2 lg:w-1/4">Kick-off:</div>
+              <div className="w-1/2">
+                <p>
+                  : <span className="text-secondary">{dataEngineerCopy.kickOffDate}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-3">
           * Sesi live class bersama mentor dan instruktur dilakukan setiap hari minggu dan rabu
           19.00 - 21.30 wib (120-150 menit). Sesi mentoring untuk practice case exercise dilakukan
           setiap hari jumat.

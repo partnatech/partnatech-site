@@ -81,5 +81,7 @@ export const analyticsEngineeringCopy = {
       image: "/assets/images/mentors/fix-tutor-DE-ghaly.png",
     },
   ],
-  chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2, 13 May - 11 August 2024",
+  chip: "Currently Open: PartnaLearn AE Bootcamp Beta 2 Registration until 18 May 2024",
+  registrationDate: "May 18th 2024",
+  kickOffDate: "May 19th 2024",
 };
